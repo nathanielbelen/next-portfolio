@@ -3,22 +3,24 @@ import Heading from '../components/heading';
 import About from '../components/aboutme';
 import Works from '../components/works';
 import Contact from '../components/contact';
+import AnimatedDiv from '../components/animateddiv';
 import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
-    <motion.div
-      className='p-3'
-      initial={{ y: 10, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8 }}
-    >
-      <Heading title='about me' id='about' />
-      <About />
-      <Heading title='works' id='works' />
-      <Works />
-      <Heading title='contact me' id='contact' />
-      <Contact />
-    </motion.div>
+    <div>
+      <AnimatedDiv>
+        <Heading title='about me' id='about' />
+        <About />
+      </AnimatedDiv>
+      <AnimatedDiv delay={0.5}>
+        <Heading title='works' id='works' />
+        <Works />
+      </AnimatedDiv>
+      <AnimatedDiv delay={1.0}>
+        <Heading title='contact me' id='contact' />
+        <Contact />
+      </AnimatedDiv>
+    </div>
   );
 }

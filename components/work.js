@@ -5,8 +5,11 @@ import { motion } from 'framer-motion';
 
 export default function Work({ info: { title, description, link } }) {
   return (
-    <motion.div className='basis-1/2 border px-3 py-2 flex flex-col items-center justify-center'>
-      <div className='bg-slate-200 rounded-xl p-2 transition hover:-translate-y-1'>
+    <div className='basis-1/2 border px-3 py-2 flex flex-col items-center justify-center'>
+      <motion.div
+        className='bg-slate-200 rounded-xl p-2'
+        whileHover={{ scale: 1.025 }}
+      >
         <div className='px-4 pt-2'>
           <Link href={`/works/${link}`}>
             <a>
@@ -24,7 +27,7 @@ export default function Work({ info: { title, description, link } }) {
             <a>{description}</a>
           </Link>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 }

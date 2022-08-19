@@ -1,9 +1,10 @@
 import Heading from '../../components/heading';
+import AnimatedDiv from '../../components/animateddiv';
 
 export default function Atelier() {
   return (
-    <div className='p-3'>
+    <AnimatedDiv>
       <Heading title='works' />
-    </div>
+    </AnimatedDiv>
   );
 }
