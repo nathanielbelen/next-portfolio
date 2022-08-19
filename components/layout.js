@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Navbar from './navbar.js';
 import Footer from './footer.js';
 
-export default function Layout({ children }) {
+export default function Layout({ children, router }) {
   return (
     <div className="relative min-h-screen">
       <Head>
@@ -10,7 +10,7 @@ export default function Layout({ children }) {
         <meta name='description' content={`nathaniel's portfolio website`} />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Navbar />
+      <Navbar path={router.asPath}/>
       <main className='max-w-screen-md mx-auto border pb-10'>{children}</main>
       <Footer />
     </div>

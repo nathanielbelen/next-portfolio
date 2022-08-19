@@ -22,7 +22,7 @@ export default function About() {
           in congue mauris, vitae euismod sem.
         </span>
         <br />
-        <span>Here are some technologies that I've been working with:</span>
+        <span>Here are some technologies that I&apos;ve been working with:</span>
         <ul className='flex flex-wrap list-[square] list-inside mx-10'>
           <li className='basis-1/2'>Javascript ES6+</li>
           <li className='basis-1/2'>React.js</li>
@@ -34,10 +34,11 @@ export default function About() {
         </ul>
       </div>
       <div className='flex flex-col justify-center'>
+
         <img
           className='max-w-none w-36 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500'
           src='/assets/1646757629589.jpg'
-          alt='photo of Nathaniel'
+          alt='Nathaniel'
         ></img>
       </div>
     </div>

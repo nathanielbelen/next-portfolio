@@ -1,9 +1,21 @@
 import Heading from '../../components/heading';
+import Link from 'next/link';
+
+let work = {
+  title: 'Starkfront'
+}
 
 export default function Starkfront() {
   return (
     <div className='px-5'>
-      <Heading title='works > Starkfront' />
+      <div className='flex items-center gap-6'>
+        <div className='text-3xl font-roboto font-bold py-7 decoration-slate-400 relative ml-6'>
+          <div className='absolute -top-[40px]' id={`starkfront`}></div>
+          works > {work.title}
+        </div>
+        <div className='bg-black h-px grow center'></div>
+        <div className='mr-6 text-sm'><Link href='/works'><a>{`<< back`}</a></Link></div>
+      </div>
       <div className='indent-16 px-5'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu
         elementum purus. Cras vitae ante sit amet sem feugiat facilisis in vel

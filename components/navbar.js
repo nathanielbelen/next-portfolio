@@ -1,8 +1,9 @@
 import Link from 'next/link';
+import NavbarItem from './navbar-item.js'
 
-export default function Navbar() {
+export default function Navbar({ path }) {
   return (
-    <div className='sticky top-0 p-5 border bg-white max-w-screen-lg m-auto z-50 font-roboto'>
+    <div className='sticky top-0 p-5 border  max-w-screen-lg m-auto z-50 font-roboto' id='navbar'>
       <div className='flex items-center'>
         <div className='text-3xl font-medium'>
         <Link href='/'>
@@ -10,26 +11,10 @@ export default function Navbar() {
             </Link>
         </div>
         <div className='flex-grow flex gap-5 px-10 text-xl'>
-          <div>
-            <Link href='/'>
-              <a>home</a>
-            </Link>
-          </div>
-          <div>
-          <Link href='/works'>
-              <a>works</a>
-            </Link>
-          </div>
-          <div>
-          <Link href='/contact'>
-              <a>contact me</a>
-            </Link>
-          </div>
-          <div>
-          <Link href='/posts'>
-              <a>posts</a>
-            </Link>
-          </div>
+          <NavbarItem path={path} pathName={`/`} name='home'/>
+          <NavbarItem path={path} pathName={`/works`} name='works'/>
+          <NavbarItem path={path} pathName={`/contact`} name='contact'/>
+          <NavbarItem path={path} pathName={`/posts`} name='posts'/>
         </div>
         <div className=''>🌑/🌞</div>
       </div>

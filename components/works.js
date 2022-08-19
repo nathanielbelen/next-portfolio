@@ -10,8 +10,8 @@ const works = [
 export default function Works() {
   return (
     <div className='flex flex-wrap'>
-      {works.map((work) => (
-        <Work info={work} />
+      {works.map((work, i) => (
+        <Work info={work} key={i} />
       ))}
     </div>
   );
