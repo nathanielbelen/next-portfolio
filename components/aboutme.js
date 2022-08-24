@@ -7,7 +7,7 @@ import profile from '/public/assets/1646757629589.jpg';
 
 export default function About() {
   return (
-    <div className='px-5 flex gap-5'>
+    <div className=' flex gap-5'>
       <div className='flex flex-col'>
         <span className='indent-16'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu

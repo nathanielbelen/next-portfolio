@@ -1,5 +1,7 @@
 import Heading from '../../components/heading';
 import Link from 'next/link';
+import AnimatedDiv from '../../components/animateddiv';
+
 
 let work = {
   title: 'Starkfront'
@@ -7,7 +9,7 @@ let work = {
 
 export default function Starkfront() {
   return (
-    <div className='px-5'>
+    <AnimatedDiv>
       <div className='flex items-center gap-6'>
         <div className='text-3xl font-roboto font-bold py-7 decoration-slate-400 relative ml-6'>
           <div className='absolute -top-[40px]' id={`starkfront`}></div>
@@ -42,6 +44,6 @@ export default function Starkfront() {
           <a href='https://github.com/Stark-Direwolves/Starkfront'>github</a>
         </li>
       </ul>
-    </div>
+    </AnimatedDiv>
   );
 }
