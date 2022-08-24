@@ -1,12 +1,12 @@
 import Heading from '../../components/heading';
 import Works from '../../components/works';
-import AnimatedDiv from '../../components/animateddiv';
+import SectionDiv from '../../components/sectiondiv';
 
 export default function MyWorks() {
   return (
-    <AnimatedDiv>
+    <SectionDiv>
       <Heading title='works' />
       <Works />
-    </AnimatedDiv>
+    </SectionDiv>
   );
 }

@@ -1,6 +1,6 @@
 import Heading from '../../components/heading';
 import Link from 'next/link';
-import AnimatedDiv from '../../components/animateddiv';
+import SectionDiv from '../../components/sectiondiv';
 
 
 let work = {
@@ -9,9 +9,9 @@ let work = {
 
 export default function Starkfront() {
   return (
-    <AnimatedDiv>
+    <SectionDiv>
       <div className='flex items-center gap-6'>
-        <div className='text-3xl font-roboto font-bold py-7 decoration-slate-400 relative ml-6'>
+        <div className='text-3xl font-bold py-7 decoration-slate-400 relative ml-6'>
           <div className='absolute -top-[40px]' id={`starkfront`}></div>
           works > {work.title}
         </div>
@@ -44,6 +44,6 @@ export default function Starkfront() {
           <a href='https://github.com/Stark-Direwolves/Starkfront'>github</a>
         </li>
       </ul>
-    </AnimatedDiv>
+    </SectionDiv>
   );
 }

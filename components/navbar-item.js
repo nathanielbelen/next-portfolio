@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 export default function NavbarItem({ path, pathName, name }) {
   return (
-    <div className='transition-colors duration-300 border p-2 rounded-lg text-xl border-white hover:border-slate-300'>
+    <div className={`transition-colors duration-300 p-2 text-xl hover:text-[#A2A7A9] ${path === pathName ? 'underline underline-offset-8 decoration-1' : null}`}>
       <Link href={pathName}>
-        <a className={path === pathName ? `underline underline-offset-8 decoration-1` : null}>{name}</a>
+        <a>{name}</a>
       </Link>
     </div>
   );

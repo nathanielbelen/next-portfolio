@@ -31,6 +31,7 @@ export default function About() {
           <li className='basis-1/2'>Next.js</li>
           <li className='basis-1/2'>MongoDB</li>
           <li className='basis-1/2'>PostgreSQL</li>
+          <li className='basis-1/2'>TypeScript</li>
         </ul>
       </div>
       <div className='flex flex-col justify-center'>
