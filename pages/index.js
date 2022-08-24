@@ -6,7 +6,6 @@ import Works from '../components/works';
 import Contact from '../components/contact';
 import AnimatedDiv from '../components/animateddiv';
 import SectionDiv from '../components/sectiondiv';
-import { motion } from 'framer-motion';
 
 export default function Home() {
   return (

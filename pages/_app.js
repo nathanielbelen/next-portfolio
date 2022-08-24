@@ -1,7 +1,5 @@
 import Layout from '../components/layout.js';
-import { AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import useDarkMode from '../components/useDarkMode.js';
 import '../styles/globals.css';
 
 /* <AnimatePresence
@@ -15,12 +13,9 @@ onExitComplete={() => {
 > */
 
 function MyApp({ Component, pageProps, router }) {
-  const { theme, toggleTheme } = useDarkMode();
   return (
-    <Layout router={router} theme={theme} toggleTheme={toggleTheme}>
-      <AnimatePresence>
+    <Layout router={router}>
         <Component {...pageProps} />
-      </AnimatePresence>
     </Layout>
   );
 }
