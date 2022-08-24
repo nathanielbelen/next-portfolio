@@ -18,15 +18,7 @@ function MyApp({ Component, pageProps, router }) {
   const { theme, toggleTheme } = useDarkMode();
   return (
     <Layout router={router} theme={theme} toggleTheme={toggleTheme}>
-      <AnimatePresence
-        mode='wait'
-        initial={true}
-        onExitComplete={() => {
-          if (typeof window !== 'undefined') {
-            window.scrollTo({ top: 0 });
-          }
-        }}
-      >
+      <AnimatePresence>
         <Component {...pageProps} />
       </AnimatePresence>
     </Layout>

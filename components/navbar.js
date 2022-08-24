@@ -3,8 +3,8 @@ import NavbarItem from './navbar-item.js'
 
 export default function NavBar({ path, toggleTheme }) {
   return (
-    <div className='w-full drop-shadow-sm sticky top-0 p-5 bg-gray-100 z-50'>
-      <div className='max-w-screen-lg m-auto drop-shadow-lg' id='navbar'>
+    <div className='w-full'>
+      <div className='p-5 max-w-screen-lg m-auto' id='navbar'>
         <div className='flex items-center'>
           <div className='text-3xl font-medium'>
           <Link href='/'>

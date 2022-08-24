@@ -11,7 +11,7 @@ export default function Layout({ children, router, theme, toggleTheme }) {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <NavBar path={router.asPath} toggleTheme={toggleTheme} />
-      <main className='max-w-screen-md mx-auto pb-10'>{children}</main>
+      <main className='max-w-screen-md mx-auto pb-15'>{children}</main>
       <Footer />
     </div>
   );
