@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import AnimatedDiv from './animateddiv';
 
 let jobs = [
   {
@@ -10,7 +9,7 @@ let jobs = [
     points: [
       `Mentored students through one on one discussions of facing and overcoming obstacles in software development, and agile workflow.`,
       `Provided technical assistance and shaped the critical problem-solving process of students.`,
-      `Instructed students in CS fundamentals, Javascript core concepts, modern web development technologies (React, Express, database management systems, deployment platforms), and industry best-practices.`,
+      `Instructed students in CS fundamentals, JavaScript core concepts, modern web development technologies (React, Express, database management systems, deployment platforms), and industry best-practices.`,
     ],
   },
   {
@@ -18,13 +17,13 @@ let jobs = [
     role: 'Advanced Software Engineering Immersive',
     tenure: 'Feb 2022 - May 2022',
     points: [`Received instruction on CS fundamentals, JavaScript core concepts, industry best-practices, and modern web development technologies (React, Node, Express, database management systems, deployment platforms).`,
-    `Developed on numerous projects implementing agile methodologies and feature branch Git workflow.`, `Completed 700+ coding hours, including pair programming with Software Engineers of various skill levels.`],
+    `Developed on numerous projects implementing agile methodologies and feature branch Git workflow.`, `Completed 700+ coding hours, of which included pair programming with Software Engineers of various skill levels.`],
   },
   {
     name: 'LEVO',
     role: 'Ecommerce Manager',
     tenure: 'Oct 2017 - Apr 2020',
-    points: [`Created and managed promotional ad campaigns for Ebay and Amazon channels to increase sales.`, `Effectively handled day-to-day ecommerce operations on Ebay and Amazon.`, `Provided insights on customer shopping trends to support product assortment and identify assortment gaps.`, `Ensured good customer service by addressing and ensuring the timely resolution of customer issues or comments.`],
+    points: [`Created and managed promotional ad campaigns for Ebay and Amazon channels to increase sales.`, `Effectively handled day-to-day ecommerce operations on Ebay and Amazon.`, `Provided insights on customer shopping trends to support product assortment and identify assortment gaps.`, `Worked to provide good customer service by addressing and ensuring the timely resolution of customer issues or comments.`],
   },
   {
     name: 'Green Project',

@@ -3,29 +3,38 @@ import Heading from '../components/heading';
 import About from '../components/aboutme';
 import Experiences from '../components/experiences';
 import Works from '../components/works';
-import Contact from '../components/contact';
-import AnimatedDiv from '../components/animateddiv';
 import SectionDiv from '../components/sectiondiv';
+import Page from '../components/layouts/page';
+import Link from 'next/link'
 
-export default function Home() {
+export default function Home({ key }) {
   return (
-    <div>
-      <SectionDiv>
+    <Page key={key}>
+      <SectionDiv delay={0.3}>
         <Heading title='about me' id='about' />
         <About />
       </SectionDiv>
-      <SectionDiv delay={0.5}>
+      <SectionDiv delay={0.6}>
         <Heading title='experience' id='experience' />
         <Experiences />
       </SectionDiv>
-      <SectionDiv delay={1}>
+      <SectionDiv delay={0.9}>
         <Heading title='works' id='works' />
         <Works />
       </SectionDiv>
-      <SectionDiv delay={1.5}>
+      <SectionDiv delay={1.2}>
         <Heading title='contact me' id='contact' />
-        <Contact />
+        <div className='text-center'>
+          <p className='font-semibold text-2xl p-2'>
+            <Link href='/contact'>
+              <a><u>Let&apos;s talk!</u></a>
+            </Link>
+          </p>
+          <p className='text-xl'>
+            I&apos;m always interested in new opportunities.
+          </p>
+        </div>
       </SectionDiv>
-    </div>
+    </Page>
   );
 }

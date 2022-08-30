@@ -11,10 +11,10 @@ export default function Layout({ children, router }) {
         <meta name='description' content={`nathaniel's portfolio website`} />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <AnimatePresence>
+      <AnimatePresence exitBeforeEnter>
         <NavBar path={router.asPath} />
-        <main className='max-w-screen-md mx-auto pb-14'>{children}</main>
       </AnimatePresence>
+        <main className='max-w-screen-md mx-auto pb-14'>{children}</main>
       <Footer />
     </div>
   );

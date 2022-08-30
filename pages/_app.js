@@ -1,4 +1,5 @@
 import Layout from '../components/layout.js';
+import { AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import '../styles/globals.css';
 
@@ -15,7 +16,9 @@ onExitComplete={() => {
 function MyApp({ Component, pageProps, router }) {
   return (
     <Layout router={router}>
-        <Component {...pageProps} />
+      <AnimatePresence exitBeforeEnter>
+        <Component {...pageProps} key={router.route} />
+      </AnimatePresence>
     </Layout>
   );
 }
