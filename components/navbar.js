@@ -23,7 +23,7 @@ const emojis = [
 
 const SocialItem = function ({ link, children }) {
   return (
-    <div className={`transition-colors duration-300 p-2 text-white w-10`}>
+    <div className={`transition-colors duration-300 p-2 text-white w-11 rounded-xl  hover:bg-slate-200`}>
       <a href={link} target='_blank' rel='noreferrer'>
         {children}
       </a>
