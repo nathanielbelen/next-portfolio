@@ -7,7 +7,7 @@ export default function Work({
 }) {
   return (
     <motion.div
-      className='flex flex-col bg-slate-200 rounded-md justify-between min-h-[18rem] p-5 relative'
+      className='flex flex-col bg-slate-100 rounded-md justify-between min-h-[18rem] p-5 relative'
       whileHover={{ y: -2 }}
     >
       <header className=''>
@@ -56,7 +56,7 @@ export default function Work({
       </header>
       <footer className=''>
         <ul className='text-sm gap-x-2 gap-y-1 flex flex-wrap'>
-          {stack.map((tech, index) => <li key={index} className='bg-slate-300 px-1 rounded'>{tech}</li>)}
+          {stack.map((tech, index) => <li key={index} className='bg-slate-200 px-1 rounded'>{tech}</li>)}
         </ul>
       </footer>
     </motion.div>

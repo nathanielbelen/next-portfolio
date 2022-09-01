@@ -7,9 +7,9 @@ import SectionDiv from '../components/sectiondiv';
 import Page from '../components/layouts/page';
 import Link from 'next/link'
 
-export default function Home({ key }) {
+export default function Home({ route }) {
   return (
-    <Page key={key}>
+    <Page route={route}>
       <SectionDiv>
         <Heading title='about me' id='about' />
         <About />
