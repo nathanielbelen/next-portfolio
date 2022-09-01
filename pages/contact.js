@@ -7,7 +7,7 @@ export default function ContactMe() {
     <SectionDiv>
       <Heading title='contact me' />
       <div className='text-center text-xl'>
-        <p>Find me at LinkedIn and GitHub</p>
+        <p>Find me at <a href='' className='underline underline-offset-4'>LinkedIn</a>, email me <a className='underline underline-offset-4'>here</a>, or fill out the form below.</p>
       </div>
 
       <FormSpree />

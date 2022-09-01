@@ -29,38 +29,25 @@ export default function SDC() {
         </div>
         <div className='px-5'>
           <p>
-            stuff here
+            {`I worked with a team of engineers to overhaul an existing ecommerce storefront's API to withstand production-level traffic. The inherhited monolithic backend was slow, with response times often reaching over 1000ms. To refactor this application to microservices, we decomposed the existing API into 3 services: Products, Reviews, and Q&A. I personally was in charge of the Products service.`}
+          </p>
+          <br />
+          <p>
+            {`After the iterative process of improving queries, our service was able to reaching 1600 requests per second while staying under 1500ms response time and 1% error rate. Through horizontally scaling the service, the service was able to reach 4500 requests per second (281% increase in rps).`}
           </p>
         </div>
-        <ul className='indent-8 px-5'>
+        <ul className='pl-10'>
           <li className='m-4'>
             <span className='font-bold uppercase bg-slate-200 rounded p-1'>
               technologies
             </span>{' '}
-            zee technologies
+            Node.js, NGINX, Express, PostgreSQL, AWS, Docker, NewRelic, k6
           </li>
           <li className='m-4'>
             <span className='font-bold uppercase bg-slate-200 rounded p-1'>
               source
             </span>{' '}
-            <a href=''>github</a>
-          </li>
-          <li className='m-4'>
-            <span className='font-bold uppercase bg-slate-200 rounded p-1'>
-              challenges
-            </span>
-            <button
-              onClick={() => {
-                setShowChallenge(!showChallenge);
-              }}
-            >
-              +
-            </button>
-            {showChallenge && (
-              <div className='text-sm p-4 m-4 rounded-lg bg-slate-100'>
-              sum challenge
-              </div>
-            )}
+            <a href='https://github.com/nathanielbelen/project-atelier-product-api' target='_blank' rel='noreferrer'>GitHub</a>
           </li>
         </ul>
       </SectionDiv>

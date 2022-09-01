@@ -29,38 +29,21 @@ export default function Roulette() {
         </div>
         <div className='px-5'>
           <p>
-            stuff here
+            Given 2 days to work on creating an application of our choice with the goal of achieving MVP, I chose to create a roulette app that spun synchronously to all clients.
           </p>
         </div>
-        <ul className='indent-8 px-5'>
+        <ul className='pl-10'>
           <li className='m-4'>
             <span className='font-bold uppercase bg-slate-200 rounded p-1'>
               technologies
             </span>{' '}
-            zee technologies
+            React, WebSocket, Node.js, Axios, MUI, Express, SQLite
           </li>
           <li className='m-4'>
             <span className='font-bold uppercase bg-slate-200 rounded p-1'>
               source
             </span>{' '}
-            <a href=''>github</a>
-          </li>
-          <li className='m-4'>
-            <span className='font-bold uppercase bg-slate-200 rounded p-1'>
-              challenges
-            </span>
-            <button
-              onClick={() => {
-                setShowChallenge(!showChallenge);
-              }}
-            >
-              +
-            </button>
-            {showChallenge && (
-              <div className='text-sm p-4 m-4 rounded-lg bg-slate-100'>
-              sum challenge
-              </div>
-            )}
+            <a href='https://github.com/nathanielbelen/ouronlygameisroulette' target='_blank' rel='noreferrer'>GitHub</a>
           </li>
         </ul>
       </SectionDiv>
