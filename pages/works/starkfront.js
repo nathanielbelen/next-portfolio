@@ -25,7 +25,7 @@ export default function Starkfront() {
                 <a>works</a>
               </Link>
             </span>
-            <span> > </span>
+            <span> &gt; </span>
             <span className='font-bold text-2xl'>{work.title} </span>
             <span className='font-bold uppercase bg-slate-200 rounded p-1'>
               2022

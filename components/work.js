@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export default function Work({
-  info: { title, description, link, icon, thumbnail, stack, source, deployed },
+  info: { title, description, link, icon, thumbnail, stack, source, deployed, direct },
 }) {
   return (
     <motion.div
@@ -44,19 +44,31 @@ export default function Work({
             )}
           </ul>
         </div>
-        <Link href={`works/${link}`}>
+        {direct ? (
           <a
             className={`z-20 hover:text-slate-600 transition-colors before:content-[''] before:absolute before:z-0 before:h-full before:w-full before:top-0 before:left-0 before:block`}
+            href={source}
           >
             <div className='text-2xl font-semibold py-3'>{title}</div>
           </a>
-        </Link>
-
+        ) : (
+          <Link href={`works/${link}`}>
+            <a
+              className={`z-20 hover:text-slate-600 transition-colors before:content-[''] before:absolute before:z-0 before:h-full before:w-full before:top-0 before:left-0 before:block`}
+            >
+              <div className='text-2xl font-semibold py-3'>{title}</div>
+            </a>
+          </Link>
+        )}
         <div className='text-base pb-3'>{description}</div>
       </header>
       <footer className=''>
         <ul className='text-sm gap-x-2 gap-y-1 flex flex-wrap'>
-          {stack.map((tech, index) => <li key={index} className='bg-slate-200 px-1 rounded'>{tech}</li>)}
+          {stack.map((tech, index) => (
+            <li key={index} className='bg-slate-200 px-1 rounded'>
+              {tech}
+            </li>
+          ))}
         </ul>
       </footer>
     </motion.div>

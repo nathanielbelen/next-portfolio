@@ -16,7 +16,7 @@ onExitComplete={() => {
 function MyApp({ Component, pageProps, router }) {
   return (
     <Layout router={router}>
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode='wait'>
         <Component {...pageProps} route={router.route} />
       </AnimatePresence>
     </Layout>

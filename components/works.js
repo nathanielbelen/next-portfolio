@@ -22,6 +22,16 @@ const icons = {
 
 const works = [
   {
+    title: 'Starkfront',
+    description: 'An ecommerce product page.',
+    link: 'starkfront',
+    source: 'https://github.com/Stark-Direwolves/Starkfront',
+    icon: icons.shoppingcart,
+    stack: ['React', 'Node.js', 'Express', 'Axios', 'Webpack', 'Styled Components', 'AWS', 'Jest'],
+    thumbnail: starkfront_thumbnail,
+    direct: false,
+  },
+  {
     title: 'Project Atelier',
     description: `Built, tested, and scaled backend infrastructure for 'products' microservice.`,
     link: 'atelier',
@@ -29,6 +39,7 @@ const works = [
     icon: icons.server,
     stack: ['Node.js', 'NGINX', 'Express', 'PostgreSQL', 'AWS', 'Docker', 'NewRelic', 'k6'],
     thumbnail: sdc_thumbnail,
+    direct: false,
   },
   {
     title: 'Apples-to-Oranges',
@@ -38,15 +49,7 @@ const works = [
     icon: icons.controller,
     stack: ['React', 'MUI', 'Express', 'Firebase', 'Node.js', 'Socket.io'],
     thumbnail: a2o_thumbnail,
-  },
-  {
-    title: 'Starkfront',
-    description: 'An ecommerce product page.',
-    link: 'starkfront',
-    source: 'https://github.com/Stark-Direwolves/Starkfront',
-    icon: icons.shoppingcart,
-    stack: ['React', 'Node.js', 'Express', 'Axios', 'Webpack', 'Styled Components', 'AWS', 'Jest'],
-    thumbnail: starkfront_thumbnail
+    direct: true,
   },
   {
     title: 'ouronlygameisroulette',
@@ -55,7 +58,8 @@ const works = [
     source: 'https://github.com/nathanielbelen/ouronlygameisroulette',
     icon: icons.controller,
     stack: ['React', 'WebSocket', 'Node.js', 'Axios', 'MUI', 'Express', 'SQLite'],
-    thumbnail: oogir_thumbnail
+    thumbnail: oogir_thumbnail,
+    direct: true,
   },
 ];
 
