@@ -7,22 +7,22 @@ import SectionDiv from '../components/sectiondiv';
 import Page from '../components/layouts/page';
 import Link from 'next/link'
 
-export default function Home({ key }) {
+export default function Home({ route }) {
   return (
-    <Page key={key}>
-      <SectionDiv delay={0.3}>
+    <Page route={route}>
+      <SectionDiv>
         <Heading title='about me' id='about' />
         <About />
       </SectionDiv>
-      <SectionDiv delay={0.6}>
+      <SectionDiv delay={0.3}>
         <Heading title='experience' id='experience' />
         <Experiences />
       </SectionDiv>
-      <SectionDiv delay={0.9}>
+      <SectionDiv delay={0.6}>
         <Heading title='works' id='works' />
         <Works />
       </SectionDiv>
-      <SectionDiv delay={1.2}>
+      <SectionDiv delay={0.9}>
         <Heading title='contact me' id='contact' />
         <div className='text-center'>
           <p className='font-semibold text-2xl p-2'>
