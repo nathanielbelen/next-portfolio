@@ -27,9 +27,11 @@ export default function Roulette() {
             </span>
           </div>
         </div>
-        <div className='px-5'>
+        <div className='px-5 text-justify'>
           <p>
-            Given 2 days to work on creating an application of our choice with the goal of achieving MVP, I chose to create a roulette app that spun synchronously to all clients.
+            Given 2 days to work on creating an application of our choice with the goal of reaching MVP, I chose to create a roulette app that spun synchronously to all clients.
+            <br />
+            The application features a currency system, a live chat, a spinning roulette wheel, and a wager board mirroring a common Roulette board.
           </p>
         </div>
         <ul className='pl-10'>

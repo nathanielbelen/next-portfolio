@@ -43,11 +43,8 @@ export default function NavBar({ path }) {
   }, []);
 
   return (
-    <motion.div
+    <div
       className='w-full'
-      initial={{ y: 10, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
     >
       <div className='p-5 max-w-screen-lg m-auto' id='navbar'>
         <div className='flex items-center'>
@@ -82,7 +79,7 @@ export default function NavBar({ path }) {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

@@ -27,7 +27,7 @@ const works = [
     link: 'atelier',
     source: 'https://github.com/nathanielbelen/project-atelier-product-api',
     icon: icons.server,
-    stack: 'Node.js, NGINX, Express, PostgreSQL, AWS, Docker, NewRelic, k6',
+    stack: ['Node.js', 'NGINX', 'Express', 'PostgreSQL', 'AWS', 'Docker', 'NewRelic', 'k6'],
     thumbnail: sdc_thumbnail,
   },
   {
@@ -36,7 +36,7 @@ const works = [
     link: 'apples',
     source: 'https://github.com/Fraktaa/Social-Game-Night',
     icon: icons.controller,
-    stack: 'React, MUI, Express, Firebase, Node.js, Socket.io',
+    stack: ['React', 'MUI', 'Express', 'Firebase', 'Node.js', 'Socket.io'],
     thumbnail: a2o_thumbnail,
   },
   {
@@ -45,7 +45,7 @@ const works = [
     link: 'starkfront',
     source: 'https://github.com/Stark-Direwolves/Starkfront',
     icon: icons.shoppingcart,
-    stack: 'React, Node.js, Express, Axios, Webpack, AWS, Jest, Styled Components',
+    stack: ['React', 'Node.js', 'Express', 'Axios', 'Webpack', 'Styled Components', 'AWS', 'Jest'],
     thumbnail: starkfront_thumbnail
   },
   {
@@ -54,7 +54,7 @@ const works = [
     link: 'ouronlygameisroulette',
     source: 'https://github.com/nathanielbelen/ouronlygameisroulette',
     icon: icons.controller,
-    stack: 'React, WebSocket, Node.js, Axios, MUI, Express, SQLite',
+    stack: ['React', 'WebSocket', 'Node.js', 'Axios', 'MUI', 'Express', 'SQLite'],
     thumbnail: oogir_thumbnail
   },
 ];
