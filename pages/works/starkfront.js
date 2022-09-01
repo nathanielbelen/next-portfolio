@@ -43,7 +43,7 @@ export default function Starkfront() {
             gallery, product information, style selector, and add-to-cart.
           </p>
         </div>
-        <ul className='indent-8 px-5'>
+        <ul className='pl-10'>
           <li className='m-4'>
             <span className='font-bold uppercase bg-slate-200 rounded p-1'>
               technologies
@@ -54,7 +54,7 @@ export default function Starkfront() {
             <span className='font-bold uppercase bg-slate-200 rounded p-1'>
               source
             </span>{' '}
-            <a href='https://github.com/Stark-Direwolves/Starkfront'>github</a>
+            <a href='https://github.com/Stark-Direwolves/Starkfront' target='_blank' rel='noreferrer'>GitHub</a>
           </li>
           <li className='m-4'>
             <span className='font-bold uppercase bg-slate-200 rounded p-1'>
@@ -65,7 +65,7 @@ export default function Starkfront() {
                 setShowChallenge(!showChallenge);
               }}
             >
-              +
+              {showChallenge ? '+' : '-'}
             </button>
             {showChallenge && (
               <div className='text-sm p-4 m-4 rounded-lg bg-slate-100 text-justify'>

@@ -22,42 +22,46 @@ const icons = {
 
 const works = [
   {
-    title: 'Starkfront',
-    description: 'ecommerce product page',
-    link: 'starkfront',
-    source: 'https://github.com/Stark-Direwolves/Starkfront',
-    icon: icons.shoppingcart,
-    thumbnail: starkfront_thumbnail
-  },
-  {
-    title: 'ouronlygameisroulette',
-    description: 'roulette game',
-    link: 'ouronlygameisroulette',
-    source: 'https://github.com/nathanielbelen/ouronlygameisroulette',
-    icon: icons.controller,
-    thumbnail: oogir_thumbnail
-  },
-  {
-    title: 'Project Atelier Back-end',
-    description: 'microservice-oriented backend',
+    title: 'Project Atelier',
+    description: `Built, tested, and scaled backend infrastructure for 'products' microservice.`,
     link: 'atelier',
     source: 'https://github.com/nathanielbelen/project-atelier-product-api',
     icon: icons.server,
+    stack: ['Node.js', 'NGINX', 'Express', 'PostgreSQL', 'AWS', 'Docker', 'NewRelic', 'k6'],
     thumbnail: sdc_thumbnail,
   },
   {
     title: 'Apples-to-Oranges',
-    description: 'social game night application',
+    description: 'Multiplayer game application with an online chat, customizable card decks, user authentication, and more.',
     link: 'apples',
     source: 'https://github.com/Fraktaa/Social-Game-Night',
     icon: icons.controller,
+    stack: ['React', 'MUI', 'Express', 'Firebase', 'Node.js', 'Socket.io'],
     thumbnail: a2o_thumbnail,
+  },
+  {
+    title: 'Starkfront',
+    description: 'An ecommerce product page.',
+    link: 'starkfront',
+    source: 'https://github.com/Stark-Direwolves/Starkfront',
+    icon: icons.shoppingcart,
+    stack: ['React', 'Node.js', 'Express', 'Axios', 'Webpack', 'Styled Components', 'AWS', 'Jest'],
+    thumbnail: starkfront_thumbnail
+  },
+  {
+    title: 'ouronlygameisroulette',
+    description: 'Collaborative roulette application built within a 2 day timebox.',
+    link: 'ouronlygameisroulette',
+    source: 'https://github.com/nathanielbelen/ouronlygameisroulette',
+    icon: icons.controller,
+    stack: ['React', 'WebSocket', 'Node.js', 'Axios', 'MUI', 'Express', 'SQLite'],
+    thumbnail: oogir_thumbnail
   },
 ];
 
 export default function Works() {
   return (
-    <div className='flex flex-wrap'>
+    <div className='grid md:grid-cols-[repeat(2,minmax(300px,1fr))] grid-cols-[repeat(1,minmax(300px,1fr))] gap-2 py-2'>
       {works.map((work, i) => (
         <Work info={work} key={i} />
       ))}
