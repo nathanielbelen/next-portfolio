@@ -37,11 +37,11 @@ export default function Experiences() {
   const [expIndex, setExpIndex] = useState(0);
   return (
     <div className='min-h-[27rem] flex flex-col md:flex-row'>
-      <ul className='basis-1/4 flex-none flex overflow-scroll md:overflow-x-hidden md:overflow-y-hidden  md:flex-col'>
+      <ul className='basis-1/4 flex-none flex overflow-scroll gap-3 md:gap-0 md:overflow-x-hidden md:overflow-y-hidden md:flex-col'>
         {jobs.map((job, index) => (
           <li
             index={index}
-            className={`flex flex-col md:flex-row px-4 py-4 md:px-1 font-semibold ${
+            className={`flex flex-col md:flex-row md:px-2 py-4 font-semibold ${
               index === expIndex ? null : 'text-slate-400'
             }`}
             key={index}
@@ -60,7 +60,7 @@ export default function Experiences() {
           </li>
         ))}
       </ul>
-      <div className='px-4 py-2'>
+      <div className='md:px-4 md:py-2'>
         <p className='text-xl text-gray-600 font-semibold'>
           {jobs[expIndex].name}
         </p>
