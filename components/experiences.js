@@ -36,26 +36,26 @@ let jobs = [
 export default function Experiences() {
   const [expIndex, setExpIndex] = useState(0);
   return (
-    <div className='min-h-[27rem] flex'>
-      <ul className='basis-1/4 flex-none flex flex-col'>
+    <div className='min-h-[27rem] flex flex-col md:flex-row'>
+      <ul className='basis-1/4 flex-none flex overflow-scroll md:overflow-visible md:flex-col'>
         {jobs.map((job, index) => (
           <li
             index={index}
-            className={`flex px-1 py-4 font-semibold ${
+            className={`flex flex-col md:flex-row px-4 py-4 md:px-1 font-semibold ${
               index === expIndex ? null : 'text-slate-400'
             }`}
             key={index}
           >
-            <button onClick={() => { setExpIndex(Number(index)); }} className='uppercase grow'>
+            <button onClick={() => { setExpIndex(Number(index)); }} className='uppercase grow whitespace-nowrap'>
               {job.name}
             </button>
             {index === expIndex ? (
               <motion.div
-                className='bg-[#212c33] w-[2px] sideline'
+                className='bg-[#212c33] h-[2px] w-full md:w-[2px] md:h-full sideline'
                 layoutId='sideline'
               ></motion.div>
             ) : <div
-                className='w-[2px] sideline'
+                className='h-[2px] w-full md:w-[2px] md:h-full sideline'
               ></div>}
           </li>
         ))}
