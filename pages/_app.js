@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <Layout router={router}>
       <AnimatePresence mode='wait'>
-        <Component {...pageProps} route={router.route} />
+        <Component {...pageProps} key={router.route} />
       </AnimatePresence>
     </Layout>
   );
