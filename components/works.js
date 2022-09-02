@@ -29,7 +29,6 @@ const works = [
     icon: icons.shoppingcart,
     stack: ['React', 'Node.js', 'Express', 'Axios', 'Webpack', 'Styled Components', 'AWS', 'Jest'],
     thumbnail: starkfront_thumbnail,
-    direct: false,
   },
   {
     title: 'Project Atelier',
@@ -39,7 +38,6 @@ const works = [
     icon: icons.server,
     stack: ['Node.js', 'NGINX', 'Express', 'PostgreSQL', 'AWS', 'Docker', 'NewRelic', 'k6'],
     thumbnail: sdc_thumbnail,
-    direct: false,
   },
   {
     title: 'Apples-to-Oranges',
@@ -49,7 +47,7 @@ const works = [
     icon: icons.controller,
     stack: ['React', 'MUI', 'Express', 'Firebase', 'Node.js', 'Socket.io'],
     thumbnail: a2o_thumbnail,
-    direct: true,
+    direct: { link: 'https://github.com/Fraktaa/Social-Game-Night' },
   },
   {
     title: 'ouronlygameisroulette',
@@ -59,7 +57,16 @@ const works = [
     icon: icons.controller,
     stack: ['React', 'WebSocket', 'Node.js', 'Axios', 'MUI', 'Express', 'SQLite'],
     thumbnail: oogir_thumbnail,
-    direct: true,
+    direct: { link: 'https://github.com/nathanielbelen/ouronlygameisroulette' },
+  },  {
+    title: 'nathanielbelen.com',
+    description: 'Responsive personal website hosted on Vercel.',
+    link: 'portfolio',
+    deployed: 'https://nathanielbelen.com',
+    icon: icons.controller,
+    stack: ['React', 'WebSocket', 'Node.js', 'Axios', 'MUI', 'Express', 'SQLite'],
+    thumbnail: oogir_thumbnail,
+    direct: { link: 'https://nathanielbelen.com' },
   },
 ];
 

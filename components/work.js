@@ -47,7 +47,7 @@ export default function Work({
         {direct ? (
           <a
             className={`z-20 hover:text-slate-600 transition-colors before:content-[''] before:absolute before:z-0 before:h-full before:w-full before:top-0 before:left-0 before:block`}
-            href={source}
+            href={direct.link}
           >
             <div className='text-2xl font-semibold py-3'>{title}</div>
           </a>
