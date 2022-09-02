@@ -32,7 +32,7 @@ export default function About() {
         </ul>
         <br />
         <span>
-          Outside of coding, I&apos;m very interested in videogames, music, food, and
+          Outside of coding, I&apos;m very interested in video games, music, food, and
           the technologies surrounding them.
         </span>
       </div>
