@@ -65,7 +65,7 @@ const works = [
 
 export default function Works() {
   return (
-    <div className='grid md:grid-cols-[repeat(2,minmax(300px,1fr))] grid-cols-[repeat(1,minmax(300px,1fr))] gap-2 py-2'>
+    <div className='grid md:grid-cols-[repeat(2,minmax(300px,1fr))] grid-cols-[repeat(1,minmax(100%,1fr))] gap-2 py-2'>
       {works.map((work, i) => (
         <Work info={work} key={i} />
       ))}

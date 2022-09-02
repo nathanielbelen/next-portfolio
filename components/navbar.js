@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import NavbarItem from './navbar-item.js';
+import Hamburger from './hamburger.js';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
@@ -23,7 +24,9 @@ const emojis = [
 
 const SocialItem = function ({ link, children }) {
   return (
-    <div className={`transition-colors duration-300 p-2 text-white w-11 rounded-xl  hover:bg-slate-200`}>
+    <div
+      className={`transition-colors duration-300 p-2 text-white w-11 rounded-xl  hover:bg-slate-200`}
+    >
       <a href={link} target='_blank' rel='noreferrer'>
         {children}
       </a>
@@ -43,9 +46,7 @@ export default function NavBar({ path }) {
   }, []);
 
   return (
-    <div
-      className='w-full'
-    >
+    <div className='w-full '>
       <div className='p-5 max-w-screen-lg m-auto' id='navbar'>
         <div className='flex items-center'>
           <div className='text-3xl font-medium'>
@@ -53,7 +54,7 @@ export default function NavBar({ path }) {
               <a>nathaniel belen</a>
             </Link>
           </div>
-          <div className='flex-grow flex gap-5 px-10'>
+          <div className='hidden md:flex flex-grow gap-5 px-10'>
             <NavbarItem path={path} link={`/`} name='home' />
             <NavbarItem path={path} link={`/works`} name='works' />
             <NavbarItem path={path} link={`/contact`} name='contact' />
@@ -68,7 +69,8 @@ export default function NavBar({ path }) {
               </svg>
             </SocialItem>
           </div>
-          <div className='text-2xl'>
+          <div className='flex flex-grow md:hidden'></div>
+          <div className='hidden md:block text-2xl'>
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -77,6 +79,7 @@ export default function NavBar({ path }) {
               {emoji}
             </motion.button>
           </div>
+        <Hamburger path={path} />
         </div>
       </div>
     </div>

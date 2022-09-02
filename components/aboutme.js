@@ -20,7 +20,7 @@ export default function About() {
         <span>
           Here are some technologies that I&apos;ve been working with:
         </span>
-        <ul className='flex flex-wrap list-[square] list-inside mx-10'>
+        <ul className='flex flex-wrap list-[square] list-inside md:mx-10 text-sm'>
           <li className='basis-1/2'>Javascript ES6+</li>
           <li className='basis-1/2'>React.js</li>
           <li className='basis-1/2'>Node.js</li>
@@ -36,7 +36,7 @@ export default function About() {
           the technologies surrounding them.
         </span>
       </div>
-      <div className='flex flex-col justify-center'>
+      <div className='hidden md:block flex flex-col justify-center'>
         <div className='p-1 rounded-full w-44 h-44 ring-2 ring-gray-300 dark:ring-gray-500 overflow-hidden relative' >
           <Image src={profile} alt='Nathaniel' objectFit="cover" layout='fill' />
         </div>

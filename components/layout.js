@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import NavBar from './navbar.js';
 import Footer from './footer.js';
-import { AnimatePresence } from 'framer-motion';
 
 export default function Layout({ children, router }) {
   return (
@@ -11,10 +10,8 @@ export default function Layout({ children, router }) {
         <meta name='description' content={`nathaniel's portfolio website`} />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <AnimatePresence mode='wait'>
-        <NavBar path={router.asPath} />
-      </AnimatePresence>
-        <main className='max-w-screen-md mx-auto pb-14'>{children}</main>
+      <NavBar path={router.asPath} />
+      <main className='max-w-screen-md mx-auto pb-14'>{children}</main>
       <Footer />
     </div>
   );

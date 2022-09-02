@@ -11,7 +11,7 @@ export default function FormSpree() {
   }
   return (
     <form onSubmit={handleSubmit}>
-      <div className='flex flex-col border p-5 m-5'>
+      <div className='flex flex-col md:border md:p-5 md:m-5'>
         <label htmlFor='name' className='block'>
           <strong>Name</strong>
         </label>
