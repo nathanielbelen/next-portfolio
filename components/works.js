@@ -40,6 +40,7 @@ const works = [
     icon: icons.shoppingcart,
     stack: ['React', 'Node.js', 'Express', 'Axios', 'Webpack', 'Styled Components', 'AWS', 'Jest'],
     thumbnail: starkfront_thumbnail,
+    direct: { link: 'https://github.com/Stark-Direwolves/Starkfront' },
   },
   {
     title: 'Project Atelier',
@@ -49,6 +50,7 @@ const works = [
     icon: icons.server,
     stack: ['Node.js', 'NGINX', 'Express', 'PostgreSQL', 'AWS', 'Docker', 'NewRelic', 'k6'],
     thumbnail: sdc_thumbnail,
+    direct: { link: 'https://github.com/nathanielbelen/project-atelier-product-api' },
   },
   {
     title: 'Apples-to-Oranges',
@@ -84,4 +86,46 @@ export default function Works() {
     thumbnail: oogir_thumbnail,
     direct: { link: 'https://github.com/nathanielbelen/ouronlygameisroulette' },
   }
+
+[
+  {
+    title: 'nathanielbelen.com',
+    description: 'Responsive personal website hosted on Vercel.',
+    link: 'portfolio',
+    deployed: 'https://nathanielbelen.com',
+    icon: icons.home,
+    stack: ['React', 'WebSocket', 'Node.js', 'Axios', 'MUI', 'Express', 'SQLite'],
+    thumbnail: oogir_thumbnail,
+    direct: { link: 'https://nathanielbelen.com' },
+  },
+  {
+    title: 'Starkfront',
+    description: 'An ecommerce product page.',
+    link: 'starkfront',
+    source: 'https://github.com/Stark-Direwolves/Starkfront',
+    icon: icons.shoppingcart,
+    stack: ['React', 'Node.js', 'Express', 'Axios', 'Webpack', 'Styled Components', 'AWS', 'Jest'],
+    thumbnail: starkfront_thumbnail,
+  },
+  {
+    title: 'Project Atelier',
+    description: `Built, tested, and scaled backend infrastructure for 'products' microservice.`,
+    link: 'atelier',
+    source: 'https://github.com/nathanielbelen/project-atelier-product-api',
+    icon: icons.server,
+    stack: ['Node.js', 'NGINX', 'Express', 'PostgreSQL', 'AWS', 'Docker', 'NewRelic', 'k6'],
+    thumbnail: sdc_thumbnail,
+  },
+  {
+    title: 'Apples-to-Oranges',
+    description: 'Multiplayer game application with an online chat, customizable card decks, user authentication, and more.',
+    link: 'apples',
+    source: 'https://github.com/Fraktaa/Social-Game-Night',
+    icon: icons.controller,
+    stack: ['React', 'MUI', 'Express', 'Firebase', 'Node.js', 'Socket.io'],
+    thumbnail: a2o_thumbnail,
+    direct: { link: 'https://github.com/Fraktaa/Social-Game-Night' },
+  },
+]
+
 */
