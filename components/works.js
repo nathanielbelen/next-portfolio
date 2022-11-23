@@ -49,16 +49,6 @@ const works = [
     stack: ['React', 'MUI', 'Express', 'Firebase', 'Node.js', 'Socket.io'],
     thumbnail: a2o_thumbnail,
     direct: { link: 'https://github.com/Fraktaa/Social-Game-Night' },
-  },
-  {
-    title: 'ouronlygameisroulette',
-    description: 'Collaborative roulette application built within a 2 day timebox.',
-    link: 'ouronlygameisroulette',
-    source: 'https://github.com/nathanielbelen/ouronlygameisroulette',
-    icon: icons.controller,
-    stack: ['React', 'WebSocket', 'Node.js', 'Axios', 'MUI', 'Express', 'SQLite'],
-    thumbnail: oogir_thumbnail,
-    direct: { link: 'https://github.com/nathanielbelen/ouronlygameisroulette' },
   },  {
     title: 'nathanielbelen.com',
     description: 'Responsive personal website hosted on Vercel.',
@@ -80,3 +70,17 @@ export default function Works() {
     </div>
   );
 }
+
+
+/*
+  {
+    title: 'ouronlygameisroulette',
+    description: 'Collaborative roulette application built within a 2 day timebox.',
+    link: 'ouronlygameisroulette',
+    source: 'https://github.com/nathanielbelen/ouronlygameisroulette',
+    icon: icons.controller,
+    stack: ['React', 'WebSocket', 'Node.js', 'Axios', 'MUI', 'Express', 'SQLite'],
+    thumbnail: oogir_thumbnail,
+    direct: { link: 'https://github.com/nathanielbelen/ouronlygameisroulette' },
+  }
+*/

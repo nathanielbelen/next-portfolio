@@ -13,7 +13,7 @@ export default function About() {
           Hello! My name is Nathaniel, I&apos;m a{' '}
           <strong>full-stack engineer</strong> with a background in ecommerce. I
           have a great interest in being able to create things that people
-          enjoy. I currently work at <strong>Galvanize</strong> as a Software
+          enjoy. I previously worked at <strong>Galvanize</strong> as a Software
           Engineering Immersive Resident.
         </span>
         <br />

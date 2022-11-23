@@ -8,14 +8,15 @@ export default function ContactMe() {
     <Page>
       <SectionDiv>
         <Heading title='contact me' />
-        <div className='text-center text-xl'>
+        <div className='text-center text-xl leading-relaxes'>
           <p>
             Find me at{' '}
             <a href='' className='underline underline-offset-4'>
               LinkedIn
             </a>
-            , email me <a className='underline underline-offset-4'>here</a>, or
-            fill out the form below.
+            , email me <a className='underline underline-offset-4' href='mailto:me@nathanielbelen.com'>here</a>, or
+            fill out the form below.<br />
+            I look forward to hearing from you!
           </p>
         </div>
         <FormSpree />

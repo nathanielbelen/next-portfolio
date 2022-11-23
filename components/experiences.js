@@ -5,7 +5,7 @@ let jobs = [
   {
     name: 'Galvanize',
     role: 'Software Engineering Immersive Resident',
-    tenure: 'May 2022 - Present',
+    tenure: 'May 2022 - September 2022',
     points: [
       `Mentored students through one on one discussions of facing and overcoming obstacles in software development, and agile workflow.`,
       `Provided technical assistance and shaped the critical problem-solving process of students.`,
