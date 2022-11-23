@@ -17,7 +17,7 @@ let jobs = [
     role: 'Advanced Software Engineering Immersive',
     tenure: 'Feb 2022 - May 2022',
     points: [`Received instruction on CS fundamentals, JavaScript core concepts, industry best-practices, and modern web development technologies (React, Node, Express, database management systems, deployment platforms).`,
-    `Developed on numerous projects implementing agile methodologies and feature branch Git workflow.`, `Completed 700+ coding hours, of which included pair programming with Software Engineers of various skill levels.`],
+    `Developed on numerous projects implementing agile methodologies and feature branch Git workflow.`, `Completed 700+ coding hours, of which included pair programming with Software Engineers of various levels.`],
   },
   {
     name: 'LEVO',
