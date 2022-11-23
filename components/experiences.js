@@ -36,7 +36,7 @@ let jobs = [
 export default function Experiences() {
   const [expIndex, setExpIndex] = useState(0);
   return (
-    <div className='min-h-[27rem] flex flex-col md:flex-row'>
+    <div className='min-h-[25rem] flex flex-col md:flex-row'>
       <ul className='basis-1/4 flex-none flex overflow-scroll gap-3 md:gap-0 md:overflow-x-hidden md:overflow-y-hidden md:flex-col'>
         {jobs.map((job, index) => (
           <li
@@ -66,7 +66,7 @@ export default function Experiences() {
         </p>
         <p className='text-xl'>{jobs[expIndex].role}</p>
         <p className='uppercase text-sm'>{jobs[expIndex].tenure}</p>
-        <ul className='p-5 list-[square]'>
+        <ul className='pt-5 px-5 list-[square]'>
           {jobs[expIndex].points.map((point, index) => (
             <motion.li
               key={[expIndex, index]}
