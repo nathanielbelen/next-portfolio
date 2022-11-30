@@ -10,15 +10,14 @@ export default function About() {
     <div className=' flex gap-5'>
       <div className='flex flex-col md:text-justify'>
         <span className=''>
-          Hello! My name is Nathaniel, I&apos;m a{' '}
-          <strong>full-stack engineer</strong> with a background in ecommerce. I
-          have a great interest in being able to create things that people
+          Hello! My name is Nathaniel, I'm a <strong>full-stack engineer</strong> with a background in ecommerce.
+          I have a great interest in being able to create things that people
           enjoy. I previously worked at <strong>Galvanize</strong> as a Software
           Engineering Immersive Resident.
         </span>
         <br />
         <span>
-          Here are some technologies that I&apos;ve been working with:
+          Here are some technologies that I've been working with:
         </span>
         <ul className='flex flex-wrap list-[square] list-inside md:mx-10 text-sm'>
           <li className='basis-1/2'>Javascript ES6+</li>
@@ -32,7 +31,7 @@ export default function About() {
         </ul>
         <br />
         <span>
-          Outside of coding, I&apos;m very interested in video games, music, food, and
+          Outside of coding, I'm very interested in video games, music, food, and
           the technologies surrounding them.
         </span>
       </div>

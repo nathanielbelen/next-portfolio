@@ -1,8 +1,4 @@
 import Work from './work';
-import starkfront_thumbnail from '../assets/overview.png';
-import oogir_thumbnail from '../assets/ouronlygameisroulette.png';
-import sdc_thumbnail from '../assets/sdc.png';
-import a2o_thumbnail from '../assets/a2o.png';
 
 const icons = {
   shoppingcart: (
@@ -29,7 +25,6 @@ const works = [
     deployed: 'https://nathanielbelen.com',
     icon: icons.home,
     stack: ['React', 'WebSocket', 'Node.js', 'Axios', 'MUI', 'Express', 'SQLite'],
-    thumbnail: oogir_thumbnail,
     direct: { link: 'https://nathanielbelen.com' },
   },
   {
@@ -39,7 +34,6 @@ const works = [
     source: 'https://github.com/Stark-Direwolves/Starkfront',
     icon: icons.shoppingcart,
     stack: ['React', 'Node.js', 'Express', 'Axios', 'Webpack', 'Styled Components', 'AWS', 'Jest'],
-    thumbnail: starkfront_thumbnail,
     direct: { link: 'https://github.com/Stark-Direwolves/Starkfront' },
   },
   {
@@ -49,7 +43,6 @@ const works = [
     source: 'https://github.com/nathanielbelen/project-atelier-product-api',
     icon: icons.server,
     stack: ['Node.js', 'NGINX', 'Express', 'PostgreSQL', 'AWS', 'Docker', 'NewRelic', 'k6'],
-    thumbnail: sdc_thumbnail,
     direct: { link: 'https://github.com/nathanielbelen/project-atelier-product-api' },
   },
   {
@@ -59,7 +52,6 @@ const works = [
     source: 'https://github.com/Fraktaa/Social-Game-Night',
     icon: icons.controller,
     stack: ['React', 'MUI', 'Express', 'Firebase', 'Node.js', 'Socket.io'],
-    thumbnail: a2o_thumbnail,
     direct: { link: 'https://github.com/Fraktaa/Social-Game-Night' },
   },
 ];
