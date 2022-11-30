@@ -23,9 +23,10 @@ const works = [
     description: 'Responsive personal website hosted on Vercel.',
     link: 'portfolio',
     deployed: 'https://nathanielbelen.com',
+    source: 'https://github.com/nathanielbelen/next-portfolio',
     icon: icons.home,
     stack: ['React', 'WebSocket', 'Node.js', 'Axios', 'MUI', 'Express', 'SQLite'],
-    direct: { link: 'https://nathanielbelen.com' },
+    direct: { link: 'https://github.com/nathanielbelen/next-portfolio' },
   },
   {
     title: 'Starkfront',
