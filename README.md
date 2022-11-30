@@ -8,7 +8,7 @@
   I also use <a href="https://www.framer.com/motion/" target="_blank">framer-motion</a> to assist with smooth animations and <a href="https://formspree.io/" target="_blank">formspree.io</a> to handle my contact form submissions.
 </p>
 
-## development - getting started
+## development & getting started
   install the necessary dependencies
    ```sh
    npm install
