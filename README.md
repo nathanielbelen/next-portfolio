@@ -26,7 +26,7 @@
    npm run build
    ```
    
-   starts next.js production server to serve the application
+   start next.js production server to serve the application
    ```sh
    npm start
    ```
