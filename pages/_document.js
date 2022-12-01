@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
-    <Html className='scroll-smooth overflow-y-scroll'>
+    <Html lang='en' className='scroll-smooth overflow-y-scroll'>
       <Head>
         <link
           href='https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&display=swap'
