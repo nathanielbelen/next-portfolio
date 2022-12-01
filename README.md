@@ -22,11 +22,19 @@
 ## production & deployment
 
   build optimized version of application
-   ```sh
-   npm run build
-   ```
-   
-   start next.js production server to serve the application
-   ```sh
-   npm start
-   ```
+  ```sh
+  npm run build
+  ```
+
+  start next.js production server to serve the application
+  ```sh
+  npm start
+  ```
+
+## notes
+  if utilizing google analytics, add the Measurement ID to the project's environment variables
+
+  [Adding Environment Variables on Vercel Deployment](https://vercel.com/docs/concepts/projects/environment-variables)
+  ```
+  NEXT_PUBLIC_GOOGLE_ANALYTICS={analytics_key}
+  ```
