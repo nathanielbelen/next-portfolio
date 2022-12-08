@@ -32,7 +32,7 @@
   ```
 
 ## notes
-  if utilizing google analytics, add the Measurement ID to the project's environment variables
+  if utilizing google analytics, add your *Measurement ID* to the project's environment variables under *NEXT_PUBLIC_GOOGLE_ANALYTICS*
 
   [Adding Environment Variables on Vercel Deployment](https://vercel.com/docs/concepts/projects/environment-variables)
   ```
