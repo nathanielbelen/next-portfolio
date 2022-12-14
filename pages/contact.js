@@ -1,12 +1,12 @@
 import Heading from '../components/heading';
-import SectionDiv from '../components/sectiondiv';
+import Section from '../components/section';
 import FormSpree from '../components/formspree';
 import Page from '../components/layouts/page';
 
 export default function ContactMe() {
   return (
     <Page>
-      <SectionDiv>
+      <Section>
         <Heading title='contact me' />
         <div className='text-center text-xl leading-relaxes'>
           <p>
@@ -20,7 +20,7 @@ export default function ContactMe() {
           </p>
         </div>
         <FormSpree />
-      </SectionDiv>
+      </Section>
     </Page>
   );
 }
