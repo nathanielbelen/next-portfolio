@@ -27,7 +27,7 @@ export default function Document() {
         />
       </Head>
       <body>
-        <Main what={'hi'}/>
+        <Main/>
         <NextScript />
       </body>
     </Html>

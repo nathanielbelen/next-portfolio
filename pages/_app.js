@@ -15,7 +15,7 @@ onExitComplete={() => {
 }}
 > */
 
-function MyApp({ Component, pageProps, what }) {
+function MyApp({ Component, pageProps }) {
   let router = useRouter();
 
   useEffect(() => {

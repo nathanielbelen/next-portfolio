@@ -23,13 +23,13 @@ const emojis = [
 
 const SocialItem = function ({ link, name, children }) {
   return (
-    <div
+    <nav
       className={`transition-colors duration-300 p-2 text-white w-11 rounded-xl  hover:bg-slate-200`}
     >
       <a href={link} target='_blank' rel='noreferrer' aria-label={`Nathaniel's ${name}`}>
         {children}
       </a>
-    </div>
+    </nav>
   );
 };
 

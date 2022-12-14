@@ -3,26 +3,26 @@ import Heading from '../components/heading';
 import About from '../components/aboutme';
 import Experiences from '../components/experiences';
 import Works from '../components/works';
-import SectionDiv from '../components/sectiondiv';
+import Section from '../components/section';
 import Page from '../components/layouts/page';
 import Link from 'next/link'
 
 export default function Home() {
   return (
     <Page>
-      <SectionDiv>
+      <Section>
         <Heading title='about me' id='about' />
         <About />
-      </SectionDiv>
-      <SectionDiv delay={0.3}>
+      </Section>
+      <Section delay={0.3}>
         <Heading title='experience' id='experience' />
         <Experiences />
-      </SectionDiv>
-      <SectionDiv delay={0.6}>
+      </Section>
+      <Section delay={0.6}>
         <Heading title='works' id='works' />
         <Works />
-      </SectionDiv>
-      <SectionDiv delay={0.9}>
+      </Section>
+      <Section delay={0.9}>
         <Heading title='contact me' id='contact' />
         <div className='text-center'>
           <p className='font-semibold text-2xl p-2'>
@@ -34,7 +34,7 @@ export default function Home() {
             I&apos;m always interested in new opportunities.
           </p>
         </div>
-      </SectionDiv>
+      </Section>
     </Page>
   );
 }

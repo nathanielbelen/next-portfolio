@@ -1,15 +1,15 @@
 import Heading from '../components/heading';
 import Works from '../components/works';
-import SectionDiv from '../components/sectiondiv';
+import Section from '../components/section';
 import Page from '../components/layouts/page';
 
 export default function MyWorks() {
   return (
     <Page>
-      <SectionDiv>
+      <Section>
         <Heading title='works' />
         <Works />
-      </SectionDiv>
+      </Section>
     </Page>
   );
 }

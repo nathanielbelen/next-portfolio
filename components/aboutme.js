@@ -7,7 +7,7 @@ import profile from '../assets/1646757629589.jpg';
 
 export default function About() {
   return (
-    <div className=' flex gap-5'>
+    <div className='flex gap-5'>
       <div className='flex flex-col md:text-justify'>
         <span className=''>
           Hello! My name is Nathaniel, I&apos;m a <strong>full-stack engineer</strong> with a

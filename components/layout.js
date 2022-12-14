@@ -14,7 +14,7 @@ export default function Layout({ children, router }) {
       <AnimatePresence mode='wait'>
         <NavBar path={router.asPath} />
       </AnimatePresence>
-      <main className='max-w-screen-md mx-auto pb-14'>{children}</main>
+      <div className='max-w-screen-md mx-auto pb-14'>{children}</div>
       <Footer />
     </div>
   );
