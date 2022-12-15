@@ -24,15 +24,15 @@ export default function Home() {
       </Section>
       <Section delay={0.9}>
         <Heading title='contact me' id='contact' />
-        <div className='text-center'>
-          <p className='font-semibold text-2xl p-2'>
+        <div className='text-center flex flex-col'>
+          <div className='font-semibold text-2xl p-2 border'>
             <Link href='/contact'>
               <a><u>Let&apos;s talk!</u></a>
             </Link>
-          </p>
-          <p className='text-xl'>
+          </div>
+          <div className='text-xl'>
             I&apos;m always interested in new opportunities.
-          </p>
+          </div>
         </div>
       </Section>
     </Page>
