@@ -8,7 +8,6 @@ export default function Document() {
           href='https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&display=swap'
           rel='stylesheet'
         />
-        <link rel='icon' href='/assets/icons/logo.ico' />
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}

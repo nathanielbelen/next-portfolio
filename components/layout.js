@@ -9,7 +9,6 @@ export default function Layout({ children, router }) {
       <Head>
         <title>nathaniel belen</title>
         <meta name='description' content={`nathaniel's portfolio website`} />
-        <link rel='icon' href='/favicon.ico' />
       </Head>
       <AnimatePresence mode='wait'>
         <NavBar path={router.asPath} />

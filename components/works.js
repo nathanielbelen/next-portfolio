@@ -25,7 +25,7 @@ const works = [
     deployed: 'https://nathanielbelen.com',
     source: 'https://github.com/nathanielbelen/next-portfolio',
     icon: icons.home,
-    stack: ['React', 'WebSocket', 'Node.js', 'Axios', 'MUI', 'Express', 'SQLite'],
+    stack: ['React', 'Next.js', 'Tailwind CSS', 'framer-motion', 'formspree'],
     direct: { link: 'https://github.com/nathanielbelen/next-portfolio' },
   },
   {
@@ -54,6 +54,25 @@ const works = [
     icon: icons.controller,
     stack: ['React', 'MUI', 'Express', 'Firebase', 'Node.js', 'Socket.io'],
     direct: { link: 'https://github.com/Fraktaa/Social-Game-Night' },
+  },
+  {
+    title: `what's up`,
+    description: 'An animated weather application displaying detailed, hour-by-hour breakdown of expected weather conditions for the coming week.',
+    link: 'whats-up',
+    deployed: 'https://classy-hotteok-c9ecbf.netlify.app/',
+    source: 'https://github.com/nathanielbelen/whats-up',
+    icon: icons.controller,
+    stack: ['React', 'Vite', 'Axios', 'chart.js', 'framer-motion'],
+    direct: { link: 'https://classy-hotteok-c9ecbf.netlify.app/' },
+  },
+  {
+    title: 'websocket-roulette',
+    description: 'A collaborative Roulette application using WebSocket, which allows for real-time wagers and chat.',
+    link: 'roulette',
+    source: 'https://github.com/nathanielbelen/websocket-roulette',
+    icon: icons.controller,
+    stack: ['MUI', 'Axios', 'Express', 'React', 'SQLite3', 'WebSocket', 'ws'],
+    direct: { link: 'https://github.com/nathanielbelen/websocket-roulette' },
   },
 ];
 
