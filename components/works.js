@@ -29,7 +29,7 @@ const works = [
     direct: { link: 'https://github.com/nathanielbelen/next-portfolio' },
   },
   {
-    title: 'Apples-to-Oranges',
+    title: 'Apples to Oranges',
     description: 'Multiplayer game application with an online chat, customizable card decks, user authentication, and more.',
     link: 'apples',
     source: 'https://github.com/Fraktaa/Social-Game-Night',
