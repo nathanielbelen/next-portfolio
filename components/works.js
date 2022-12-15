@@ -29,24 +29,6 @@ const works = [
     direct: { link: 'https://github.com/nathanielbelen/next-portfolio' },
   },
   {
-    title: 'Starkfront',
-    description: 'An ecommerce product page.',
-    link: 'starkfront',
-    source: 'https://github.com/Stark-Direwolves/Starkfront',
-    icon: icons.shoppingcart,
-    stack: ['React', 'Node.js', 'Express', 'Axios', 'Webpack', 'Styled Components', 'AWS', 'Jest'],
-    direct: { link: 'https://github.com/Stark-Direwolves/Starkfront' },
-  },
-  {
-    title: 'Project Atelier',
-    description: `Built, tested, and scaled backend infrastructure for 'products' microservice.`,
-    link: 'atelier',
-    source: 'https://github.com/nathanielbelen/project-atelier-product-api',
-    icon: icons.server,
-    stack: ['Node.js', 'NGINX', 'Express', 'PostgreSQL', 'AWS', 'Docker', 'NewRelic', 'k6'],
-    direct: { link: 'https://github.com/nathanielbelen/project-atelier-product-api' },
-  },
-  {
     title: 'Apples-to-Oranges',
     description: 'Multiplayer game application with an online chat, customizable card decks, user authentication, and more.',
     link: 'apples',
@@ -66,6 +48,15 @@ const works = [
     direct: { link: 'https://classy-hotteok-c9ecbf.netlify.app/' },
   },
   {
+    title: 'Starkfront',
+    description: 'An ecommerce product page.',
+    link: 'starkfront',
+    source: 'https://github.com/Stark-Direwolves/Starkfront',
+    icon: icons.shoppingcart,
+    stack: ['React', 'Node.js', 'Express', 'Axios', 'Webpack', 'Styled Components', 'AWS', 'Jest'],
+    direct: { link: 'https://github.com/Stark-Direwolves/Starkfront' },
+  },
+  {
     title: 'websocket-roulette',
     description: 'A collaborative Roulette application using WebSocket, which allows for real-time wagers and chat.',
     link: 'roulette',
@@ -73,6 +64,15 @@ const works = [
     icon: icons.controller,
     stack: ['MUI', 'Axios', 'Express', 'React', 'SQLite3', 'WebSocket', 'ws'],
     direct: { link: 'https://github.com/nathanielbelen/websocket-roulette' },
+  },
+  {
+    title: 'Project Atelier',
+    description: `Built, tested, and scaled backend infrastructure for 'products' microservice.`,
+    link: 'atelier',
+    source: 'https://github.com/nathanielbelen/project-atelier-product-api',
+    icon: icons.server,
+    stack: ['Node.js', 'NGINX', 'Express', 'PostgreSQL', 'AWS', 'Docker', 'NewRelic', 'k6'],
+    direct: { link: 'https://github.com/nathanielbelen/project-atelier-product-api' },
   },
 ];
 
