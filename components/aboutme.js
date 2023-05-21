@@ -10,7 +10,7 @@ export default function About() {
     <div className='flex gap-5'>
       <div className='flex flex-col'>
         <span className=''>
-          Welcome! I&apos;m Nathaniel, a passionate <strong>full-stack engineer</strong> with a background in ecommerce. I thrive on the ability to help bring joy to people&apos;s lives through the creation of remarkable experiences. Previously, I had the privilege of working at Galvanize as a Software Engineering Immersive Resident, where I help guide students on their journey to mastering JavaScript, and the latest web development technologies.
+          Welcome! I&apos;m Nathaniel, a passionate <strong>full-stack engineer</strong> with a background in ecommerce. I thrive on the ability to help bring joy to people&apos;s lives through the creation of remarkable experiences. Previously, I had the privilege of working at <strong>Galvanize</strong> as a Software Engineering Immersive Resident, where I help guide students on their journey to mastering JavaScript, and the latest web development technologies.
         </span>
         <br />
         <span>
