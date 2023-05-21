@@ -74,6 +74,15 @@ const works = [
     stack: ['Node.js', 'NGINX', 'Express', 'PostgreSQL', 'AWS', 'Docker', 'NewRelic', 'k6'],
     direct: { link: 'https://github.com/nathanielbelen/project-atelier-product-api' },
   },
+  {
+    title: 's7d take-home',
+    description: `A project highlighting my expertise in clean code, modularity, and accessibility, showcasing my commitment to delivering high-quality solutions.`,
+    link: 's7d',
+    source: 'https://github.com/nathanielbelen/s7d-take-home',
+    icon: icons.server,
+    stack: ['React', 'Vite', 'CSS3', 'JavaScript', 'HTML', 'ESLint', 'underscore'],
+    direct: { link: 'https://github.com/nathanielbelen/s7d-take-home' },
+  },
 ];
 
 export default function Works() {

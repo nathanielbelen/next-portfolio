@@ -8,12 +8,9 @@ import profile from '../assets/1646757629589.jpg';
 export default function About() {
   return (
     <div className='flex gap-5'>
-      <div className='flex flex-col md:text-justify'>
+      <div className='flex flex-col'>
         <span className=''>
-          Hello! My name is Nathaniel, I&apos;m a <strong>full-stack engineer</strong> with a
-          background in ecommerce. I have a great interest in being able to create things that people
-          enjoy. I previously worked at <strong>Galvanize</strong> as a Software
-          Engineering Immersive Resident.
+          Welcome! I&apos;m Nathaniel, a passionate <strong>full-stack engineer</strong> with a background in ecommerce. I thrive on the ability to help bring joy to people&apos;s lives through the creation of remarkable experiences. Previously, I had the privilege of working at Galvanize as a Software Engineering Immersive Resident, where I help guide students on their journey to mastering JavaScript, and the latest web development technologies.
         </span>
         <br />
         <span>
@@ -31,8 +28,7 @@ export default function About() {
         </ul>
         <br />
         <span>
-          Outside of coding, I&apos;m very interested in video games, music, food, and
-          the technologies surrounding them.
+          Beyond coding, I have a deep fascination for video games, sports, music, food, and the exciting technologies behind them.
         </span>
       </div>
       <div className='hidden md:block flex flex-col justify-center'>
