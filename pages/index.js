@@ -25,7 +25,7 @@ export default function Home() {
       <Section delay={0.9}>
         <Heading title='contact me' id='contact' />
         <div className='text-center flex flex-col'>
-          <div className='font-semibold text-2xl p-2 border'>
+          <div className='font-semibold text-2xl p-2'>
             <Link href='/contact'>
               <a><u>Let&apos;s talk!</u></a>
             </Link>
