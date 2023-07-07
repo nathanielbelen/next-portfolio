@@ -35,30 +35,42 @@ let jobs = [
 
 export default function Experiences() {
   const [expIndex, setExpIndex] = useState(0);
+  const handleExpIndexChange = (index) => {
+    setExpIndex(Number(index));
+  };
+
   return (
     <div className='min-h-[25rem] flex flex-col md:flex-row'>
       <ul className='basis-1/4 flex-none flex overflow-scroll gap-3 md:gap-0 md:overflow-x-hidden md:overflow-y-hidden md:flex-col'>
-        {jobs.map((job, index) => (
-          <li
-            index={index}
-            className={`flex flex-col md:flex-row md:px-2 py-4 font-semibold ${
-              index === expIndex ? null : 'text-slate-400'
-            }`}
-            key={index}
-          >
-            <button onClick={() => { setExpIndex(Number(index)); }} className='uppercase grow whitespace-nowrap'>
-              {job.name}
-            </button>
-            {index === expIndex ? (
-              <motion.div
-                className='bg-[#212c33] h-[2px] w-full md:w-[2px] md:h-full sideline'
-                layoutId='sideline'
-              ></motion.div>
-            ) : <div
-                className='h-[2px] w-full md:w-[2px] md:h-full sideline'
-              ></div>}
-          </li>
-        ))}
+        {jobs.map((job, index) => {
+          const isSelected = index === expIndex;
+          const textStyle = isSelected ? null : 'text-slate-400';
+          const sidelineClass = isSelected
+            ? 'bg-[#212c33] h-[2px] w-full md:w-[2px] md:h-full sideline'
+            : 'h-[2px] w-full md:w-[2px] md:h-full sideline';
+
+          return (
+            <li
+              key={index}
+              className={`flex flex-col md:flex-row md:px-2 py-4 font-semibold ${textStyle}`}
+            >
+              <button
+                onClick={() => handleExpIndexChange(index)}
+                className='uppercase grow whitespace-nowrap'
+              >
+                {job.name}
+              </button>
+              {isSelected ? (
+                <motion.div
+                  className={sidelineClass}
+                  layoutId='sideline'
+                ></motion.div>
+              ) : (
+                <div className={sidelineClass}></div>
+              )}
+            </li>
+          );
+        })}
       </ul>
       <div className='md:px-4 md:py-2'>
         <p className='text-xl text-gray-600 font-semibold'>
