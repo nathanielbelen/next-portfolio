@@ -41,7 +41,7 @@ export default function Experiences() {
 
   return (
     <div className='min-h-[25rem] flex flex-col md:flex-row'>
-      <ul className='basis-1/4 flex-none flex overflow-scroll gap-3 md:gap-0 md:overflow-x-hidden md:overflow-y-hidden md:flex-col'>
+      <ul className='basis-1/4 flex-none flex overflow-scroll overflow-y-hidden gap-3 md:gap-0 md:overflow-x-hidden md:overflow-y-hidden md:flex-col'>
         {jobs.map((job, index) => {
           const isSelected = index === expIndex;
           const textStyle = isSelected ? null : 'text-slate-400';

@@ -55,7 +55,7 @@ export default function NavBar({ path }) {
           </div>
           <div className='hidden md:flex flex-grow gap-5 px-10'>
             <NavbarItem path={path} link={`/`} name='home' />
-            <NavbarItem path={path} link={`/works`} name='works' />
+            <NavbarItem path={path} link={`/posts`} name='blog' />
             <NavbarItem path={path} link={`/contact`} name='contact' />
             <SocialItem link='https://github.com/nathanielbelen' name='GitHub'>
               <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'>

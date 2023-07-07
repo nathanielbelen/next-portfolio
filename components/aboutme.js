@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import profile from '../assets/1646757629589.jpg';
+import profile from '@/assets/1646757629589.jpg';
 
 // I am a full-stack engineer based in Los Angeles, California. I curently work at Galvanize as a Software Engineering Immersive Resident.
 

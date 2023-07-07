@@ -1,7 +1,7 @@
-import Heading from '../components/heading';
-import Section from '../components/section';
-import FormSpree from '../components/formspree';
-import Page from '../components/layouts/page';
+import Heading from '@/components/heading';
+import Section from '@/components/section';
+import FormSpree from '@/components/formspree';
+import Page from '@/components/layouts/page';
 
 export default function ContactMe() {
   return (

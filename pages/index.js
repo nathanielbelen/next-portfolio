@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import Heading from '../components/heading';
-import About from '../components/aboutme';
-import Experiences from '../components/experiences';
-import Works from '../components/works';
-import Section from '../components/section';
-import Page from '../components/layouts/page';
+import Heading from '@/components/heading';
+import About from '@/components/aboutme';
+import Experiences from '@/components/experiences';
+import Works from '@/components/works';
+import Section from '@/components/section';
+import Page from '@/components/layouts/page';
 import Link from 'next/link'
 
 export default function Home() {
