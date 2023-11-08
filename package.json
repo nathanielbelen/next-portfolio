@@ -14,7 +14,7 @@
     "@mdx-js/react": "^2.3.0",
     "@next/mdx": "^13.4.10",
     "framer-motion": "^7.2.0",
-    "next": "12.2.3",
+    "next": "12.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rehype-add-classes": "^1.0.0",
