@@ -4,6 +4,7 @@ module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
+    './posts/components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -16,6 +17,7 @@ module.exports = {
       nunito: ['Nunito Sans'],
       roboto: ['Roboto'],
       inter: ['Inter'],
+      code: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace']
     },
   },
   plugins: [],

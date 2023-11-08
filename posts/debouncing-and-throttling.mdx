@@ -1,0 +1,112 @@
+import ExampleInput from "./components/ExampleInput";
+import { debounce, throttle } from "@/lib/throttle";
+
+export const title = `Debouncing and Throttling`;
+export const date = "2023-07-23";
+
+# Introduction
+
+Imagine yourself working on a real-time search feature for restaurants. Our intended functionality is to render results as the user types. The challenge is that each request to the API might incur costs or have limitations. With our current implementation, a request is triggered for every letter typed. Here's an example of how the component might look:
+
+```javascript
+const searchInput = document.getElementById("searchInput");
+let query = "";
+
+searchInput.addEventListener("input", handleChange);
+
+function handleChange(e) {
+  const inputValue = e.target.value;
+  query = inputValue;
+  getResults(inputValue);
+}
+
+async function getResults(query) {
+  // expensive function
+}
+```
+
+<ExampleInput />
+Typing into the input shows a potential flaw in our logic. Invoking the getLocations function every time the user types a letter could be excessive. To limit the number of requests and improve the feature, we can explore two approaches: **debouncing** or **throttling**. These methods help us control how often the function is called and ensure a smoother user experience.
+
+___
+
+# Debounce
+
+> **Debounce**: Debounce is a method used to improve the performance and efficiency of event handlers, particularly in scenarios where events are triggered *rapidly* or *multiple* times in a short period. It ensures that the associated action is executed only _after_ a specified quiet period, during which no new events are triggered. Debouncing prevents unnecessary and potentially disruptive repetitive actions from being executed.
+
+Debouncing sounds like a good approach to limiting the amount of requests we make. Let's create debounce decorator and apply it to our original expensive function:
+
+```javascript
+function debounce(func, delay) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => func.apply(this, args), delay);
+  };
+}
+
+// usage example:
+const debouncedGetResults = debounce(getResults, 500);
+// calls getResults after 500ms of user inactivity
+```
+
+By utilizing the debounce pattern, we ensure that updates to the component occur only during periods of user inactivity.
+## debounce example @ 500ms
+<ExampleInput cb={debounce} />
+This approach allows users to freely input their desired text without triggering immediate updates. Instead, we wait for a brief pause in their activity, and then render the results based on the final input received.
+
+___
+
+# Throttle
+
+> **Throttle**: Throttle is a technique used to *control the rate of execution for a specific action or function*. It ensures that the action is performed at **most** once during a specified time interval, regardless of how many times it is invoked. Throttling is often employed to limit the frequency of requests or operations to prevent overloading servers or systems.
+
+Although not the best choice for our component, I think it would be useful to explore what throttling is and see its effects.
+
+```javascript
+function throttle(func, wait) {
+  let waiting = false;
+  let lastArgs;
+  let timer = null;
+
+  const timeoutFn = (context) => {
+    timer = setTimeout(() => {
+      if (lastArgs) {
+        func.apply(context, lastArgs);
+        lastArgs = null;
+        if (timer) timer = null;
+        timeoutFn(context);
+      } else {
+        waiting = false;
+      }
+    }, wait);
+  };
+
+  return function () {
+    if (!waiting) {
+      waiting = true;
+      timeoutFn(this);
+    }
+    lastArgs = [...arguments];
+  };
+}
+
+// usage example:
+const throttledGetResults = throttle(getResults, 500);
+// calls getResults after a 500ms initial delay, and then at
+// intervals of 500ms for every consecutive invocation.
+```
+
+## throttle @ 500ms
+
+<ExampleInput cb={throttle} />
+
+With this example, we make requests at 500ms intervals. This might be useful if the user needed constant updates, but for our example debouncing would be the better option. Throttling would be better suited for other types of events, such as scrolling or resizing, where many events fire in a short amount of time.
+
+___
+
+# Variations, use cases, and libraries
+
+Depending on intended functionality, you will want to consider different implementations of throttle and debounce. Elena Sharovar has a [great article](https://ellenaua.medium.com/throttle-debounce-behavior-lodash-6bcae1494e03) of the different behaviors of throttle and debounce. In summary, throttle and debounce can offer leading and trailing edge behavior, enabling immediate invocation of the function on the first run and/or invocation at the end of its delay.
+
+To implement these functionalities effectively and efficiently, it is recommended to leverage existing libraries such as [lodash](https://lodash.com/docs/4.17.15) or [underscore](https://underscorejs.org/). These libraries provide well-tested and optimized versions of debounce and throttle functions.

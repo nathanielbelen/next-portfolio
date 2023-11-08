@@ -4,23 +4,6 @@ import Hamburger from './hamburger.js';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
-const emojis = [
-  '🌞',
-  '🌑',
-  '😁',
-  '😍',
-  '😂',
-  '🤣',
-  '🎉',
-  '✨',
-  '😆',
-  '😃',
-  '😎',
-  '😏',
-  '🥳',
-  '🤯',
-];
-
 const SocialItem = function ({ link, name, children }) {
   return (
     <nav
@@ -34,15 +17,6 @@ const SocialItem = function ({ link, name, children }) {
 };
 
 export default function NavBar({ path }) {
-  const [emoji, setEmoji] = useState('❓');
-
-  const randomizeEmoji = () => {
-    setEmoji(emojis[Math.floor(Math.random() * emojis.length)]);
-  };
-
-  useEffect(() => {
-    randomizeEmoji();
-  }, []);
 
   return (
     <div className='w-full '>
@@ -55,7 +29,7 @@ export default function NavBar({ path }) {
           </div>
           <div className='hidden md:flex flex-grow gap-5 px-10'>
             <NavbarItem path={path} link={`/`} name='home' />
-            <NavbarItem path={path} link={`/posts`} name='blog' />
+            <NavbarItem path={path} link={`/posts`} name='posts' />
             <NavbarItem path={path} link={`/contact`} name='contact' />
             <SocialItem link='https://github.com/nathanielbelen' name='GitHub'>
               <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'>
@@ -69,15 +43,9 @@ export default function NavBar({ path }) {
             </SocialItem>
           </div>
           <div className='flex flex-grow md:hidden'></div>
-          <div className='hidden md:block text-2xl'>
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={randomizeEmoji}
-            >
-              {emoji}
-            </motion.button>
-          </div>
+          {/* <div className='hidden md:block text-2xl'>
+            darkmode
+          </div> */}
         <Hamburger path={path} />
         </div>
       </div>

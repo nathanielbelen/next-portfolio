@@ -1,0 +1,23 @@
+pre {
+  @apply p-4 my-4 rounded-md bg-gray-800 overflow-x-auto;
+}
+
+h1 {
+  @apply text-2xl font-bold;
+}
+
+h2 {
+  @apply text-lg font-bold;
+}
+
+p {
+  @apply py-2
+}
+
+blockquote {
+  @apply px-4 py-2 my-4 border-l-4 border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-800
+}
+
+hr {
+  @apply my-4
+}

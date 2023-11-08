@@ -2,6 +2,7 @@ import Layout from '@/components/layout.js';
 import { AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import '@/styles/globals.css';
+import '@/styles/code-blocks.css';
 import { useRouter } from 'next/router'
 import * as ga from '@/lib/ga'
 
@@ -21,7 +22,7 @@ function MyApp({ Component, pageProps }) {
   }, [router.events])
 
   return (
-    <Layout router={router}>
+    <Layout>
       <AnimatePresence mode='wait'>
         <Component {...pageProps} key={router.route} />
       </AnimatePresence>

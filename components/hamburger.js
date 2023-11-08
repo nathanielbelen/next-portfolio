@@ -38,6 +38,7 @@ export default function Hamburger({ path }) {
             </button>
             <ul className='flex flex-col items-center justify-between min-h-[250px]'>
               <NavbarItem path={path} link='/' name='home' closeMenu={closeMenu} />
+              <NavbarItem path={path} link='/posts' name='posts' closeMenu={closeMenu} />
               <NavbarItem path={path} link='/contact' name='contact' closeMenu={closeMenu} />
               <NavbarItem path={path} link='https://linkedin.com/in/nathanielbelen' name='linkedin' closeMenu={closeMenu} />
               <NavbarItem path={path} link='https://github.com/nathanielbelen' name='github' closeMenu={closeMenu} />
