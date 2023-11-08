@@ -15,7 +15,6 @@ export default function Posts({ allPostsData }) {
             return <li key={`${post.id}`}>{post.date} <Link href={`/posts/${post.id}`}><span className='underline '>{post.title}</span></Link></li>
           })}
         </ul>
-
       </Section>
     </Page>
   );
@@ -23,6 +22,7 @@ export default function Posts({ allPostsData }) {
 
 export async function getStaticProps() {
   const allPostsData = await getSortedPostsData();
+  console.log(allPostsData, 'hey')
   return {
     props: {
       allPostsData,

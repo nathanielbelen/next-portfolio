@@ -23,9 +23,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <Layout>
-      <AnimatePresence mode='wait'>
         <Component {...pageProps} key={router.route} />
-      </AnimatePresence>
     </Layout>
   );
 }
