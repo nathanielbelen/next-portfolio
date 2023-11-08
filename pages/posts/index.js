@@ -5,7 +5,6 @@ import { getSortedPostsData } from '@/lib/posts';
 import Link from 'next/link';
 
 export default function Posts({ allPostsData }) {
-  console.log(allPostsData)
   return (
     <Page>
       <Section>
@@ -22,7 +21,6 @@ export default function Posts({ allPostsData }) {
 
 export async function getStaticProps() {
   const allPostsData = await getSortedPostsData();
-  console.log(allPostsData, 'hey')
   return {
     props: {
       allPostsData,
