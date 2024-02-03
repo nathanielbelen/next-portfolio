@@ -3,6 +3,16 @@ import { motion } from 'framer-motion';
 
 let jobs = [
   {
+    name: 'Freelance',
+    role: 'Web Developer',
+    tenure: 'October 2022 - February 2024',
+    points: [
+      `Collaborated with diverse clients to translate their unique business requirements into customized and responsive web solutions, ensuring a seamless and tailored online presence.`,
+      `Developed and implemented efficient and scalable code, leveraging a variety of web technologies and frameworks, such as HTML5, CSS3, JavaScript (including ES6+), and popular front-end libraries like React, to deliver high-performance and visually appealing websites.`,
+      `Provided ongoing maintenance and support for client websites, addressing issues promptly and implementing updates to ensure optimal functionality and security.`
+    ],
+  },
+  {
     name: 'Galvanize',
     role: 'Software Engineering Immersive Resident',
     tenure: 'May 2022 - September 2022',
