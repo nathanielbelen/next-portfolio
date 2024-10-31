@@ -7,7 +7,7 @@ export default function Work({
 }) {
   return (
     <motion.div
-      className='flex flex-col bg-slate-100 rounded-md justify-between min-h-[18rem] p-5 relative'
+      className='flex flex-col bg-[rgb(148,163,184,0.05)] rounded-md justify-between min-h-[18rem] p-5 relative'
       whileHover={{ y: -2 }}
     >
       <header className=''>
@@ -18,7 +18,7 @@ export default function Work({
               <li className='w-8'>
                 <a
                   href={source}
-                  className='z-10 relative hover:fill-slate-600 transition-colors'
+                  className='z-10 relative hover:fill-slate-400 fill-white transition-colors'
                   target='_blank'
                   rel='noreferrer'
                   aria-label={`GitHub source link for ${title}`}
@@ -33,7 +33,7 @@ export default function Work({
               <li className='w-8'>
                 <a
                   href={deployed}
-                  className='z-10 relative hover:fill-slate-600 transition-colors'
+                  className='z-10 relative hover:fill-slate-400 fill-white transition-colors'
                   target='_blank'
                   rel='noreferrer'
                   aria-label={`Deployed link for ${title}`}
@@ -47,7 +47,7 @@ export default function Work({
           </ul>
         </div>
         <a
-          className={`z-20 hover:text-slate-600 transition-colors before:content-[''] before:absolute before:z-0 before:h-full before:w-full before:top-0 before:left-0 before:block`}
+          className={`z-20 hover:text-slate-400 transition-colors before:content-[''] before:absolute before:z-0 before:h-full before:w-full before:top-0 before:left-0 before:block`}
           href={direct.link}
           target='_blank'
           rel='noreferrer'
@@ -59,7 +59,7 @@ export default function Work({
       <footer className=''>
         <ul className='text-sm gap-x-2 gap-y-1 flex flex-wrap'>
           {stack.map((tech, index) => (
-            <li key={index} className='bg-slate-200 px-1 rounded'>
+            <li key={index} className='bg-[rgb(148,163,184,0.1)] px-1 rounded'>
               {tech}
             </li>
           ))}

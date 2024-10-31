@@ -1,0 +1,166 @@
+export const title = `python threaded queueing`;
+export const date = "2023-08-19";
+export const emblems = [{'text': 'python', 'color':'bg-green-200'}, {'text': 'general', 'color':'bg-gray-200'}]
+
+# # intro
+
+I’m working on an app that uses computer vision (OpenCV with Python) to monitor screen changes and react to positive template matches. The small problem I ran into was managing tasks like sending a 1300x700 image to a server in response to a positive match — each request takes around 0.3 seconds. During that time, if another positive match occurs, I’d miss it because the request is blocking.
+
+An example of this module along with its output:
+```python
+import threading
+import time
+import shared
+
+class Scanner:
+    def __init__(self):
+        shared.scanner = self # singleton pattern global instance
+
+        # create thread and start
+        self.thread = threading.Thread(target=self._main)
+        self.thread.daemon = True
+        self.thread.start()
+
+        # keep track of last update time
+        self.last_update_time = time.time()
+
+    def _main(self):
+        while True:
+            # template match for pattern 1
+            if self.template_match_pattern1():
+                print('pattern 1 matched: executing expensive function')
+                self.expensive_function()
+
+            # template match for pattern 1
+            if self.template_match_pattern2():
+                print('pattern 2 matched: executing expensive function')
+                self.expensive_function()
+
+            # print out the time elapsed since last update to visualize delay
+            current_time = time.time()
+            time_since_last_update = current_time - self.last_update_time
+            update_message = f"time since last update: {time_since_last_update:.2f} seconds."
+
+            time.sleep(0.01)
+```
+```python
+time since last update: 0.01 seconds.
+time since last update: 0.01 seconds.
+time since last update: 0.01 seconds.
+time since last update: 0.01 seconds.
+time since last update: 0.01 seconds.
+pattern 1 matched: executing expensive function
+Expensive function called
+time since last update: 0.32 seconds.
+time since last update: 0.01 seconds.
+time since last update: 0.01 seconds.
+time since last update: 0.01 seconds.
+time since last update: 0.01 seconds.
+pattern 2 matched: executing expensive function
+Expensive function called
+time since last update: 0.31 seconds.
+```
+
+When the expensive function is called, it ends up blocking the execution of the loop. In that time, there could be 30 frames containing a positive match, but this particular thread won't catch them due to the blocking operation.
+
+To fix this, I offloaded those time-consuming tasks (like sending images) to a separate "worker" thread. This way, the main app stays responsive and can keep processing new matches without getting held up.
+
+
+```python
+import threading
+import queue
+import shared
+
+class Remote:
+    def __init__(self):
+        shared.remote = self # singleton pattern global instance
+        self.task_queue = queue.Queue()
+        self.thread = threading.Thread(target=self._main)
+        self.thread.daemon = True
+        self.thread.start()
+
+    def _main(self):
+        while True:
+            try:
+                print('invoking next function in queue')
+                task, args, kwargs = self.task_queue.get(timeout=0.1)
+                task(*args, **kwargs)
+
+            except queue.Empty:
+                pass
+            time.sleep(0.01)
+
+    def invoke(self, func, *args, **kwargs):
+        print('added invocation to queue')
+        self.task_queue.put((func, args, kwargs))
+```
+
+I can update my Scanner module to use the Remote worker by calling the invoke method. This method adds the function call to a queue, which will execute the function with any provided arguments without blocking the other thread. Here's the revised Scanner module, now utilizing the invoke method from the Remote module.
+
+```python
+import threading
+import time
+import shared
+
+class Scanner:
+    def __init__(self):
+        shared.scanner = self # singleton pattern global instance
+
+        # create thread and start
+        self.thread = threading.Thread(target=self._main)
+        self.thread.daemon = True
+        self.thread.start()
+
+        # keep track of last update time
+        self.last_update_time = time.time()
+
+    def _main(self):
+        while True:
+            # template match for pattern 1
+            if self.template_match_pattern1():
+                print('pattern 1 matched: executing expensive function')
+                shared.remote.invoke(self.expensive_function()) # <----
+
+            # template match for pattern 1
+            if self.template_match_pattern2():
+                print('pattern 2 matched: executing expensive function')
+                shared.remote.invoke(self.expensive_function()) # <----
+
+            # print out the time elapsed since last update to visualize delay
+            current_time = time.time()
+            time_since_last_update = current_time - self.last_update_time
+            update_message = f"time since last update: {time_since_last_update:.2f} seconds."
+
+            time.sleep(0.01)
+```
+
+and here's the output using the new remote worker:
+```python
+time since last update: 0.01 seconds.
+time since last update: 0.01 seconds.
+time since last update: 0.01 seconds.
+time since last update: 0.01 seconds.
+time since last update: 0.01 seconds.
+pattern 1 matched: executing expensive function
+added invocation to queue
+invoking next function in queue
+Expensive function called
+time since last update: 0.01 seconds.
+time since last update: 0.01 seconds.
+time since last update: 0.01 seconds.
+time since last update: 0.01 seconds.
+time since last update: 0.01 seconds.
+pattern 2 matched: executing expensive function
+added invocation to queue
+invoking next function in queue
+Expensive function called
+time since last update: 0.01 seconds.
+```
+
+As you can see, the module doesn't miss a frame and keeps on scanning because we delegated any expensive operations to the remote thread.
+
+___
+
+# # variations and explanation
+
+The alternative would’ve been to refactor to use *asyncio* and *aiohttp* for handling requests. Instead, I chose the worker thread approach because it fits better with my singleton pattern setup. Since many modules in the app use their own threads for different tasks, sticking with this method kept things simpler and more consistent. It avoided adding complexity and kept the code flow standard across the application.

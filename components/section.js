@@ -8,7 +8,7 @@ export default function Section({ children, delay }) {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, delay }}
     >
-      <div className='bg-white border rounded-xl drop-shadow-xl px-10 pt-6 pb-8'>
+      <div className='bg-[#0000008f] rounded-xl drop-shadow-xl px-10 pt-6 pb-8'>
         {children}
       </div>
     </motion.section>

@@ -13,6 +13,16 @@ module.exports = {
         blackish: '#202023',
         grayish: '#e3e5e5',
       },
+      animation: {
+        'spin-slow': 'spin 5s linear infinite',
+      },
+      keyframes: {
+        spin: {
+          '0%': { transform: 'rotate(0deg)' },
+          '50%': { scale: '1.8 0.7'},
+          '100%': { transform: 'rotate(360deg)' },
+        },
+      },
     },
     fontFamily: {
       nunito: ['Nunito Sans'],

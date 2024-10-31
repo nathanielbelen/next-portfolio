@@ -83,7 +83,7 @@ export default function Experiences() {
         })}
       </ul>
       <div className='md:px-4 md:py-2'>
-        <p className='text-xl text-gray-600 font-semibold'>
+        <p className='text-xl text-white font-semibold'>
           {jobs[expIndex].name}
         </p>
         <p className='text-xl'>{jobs[expIndex].role}</p>
