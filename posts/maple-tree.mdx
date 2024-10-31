@@ -1,4 +1,4 @@
-import Video from "@/components/posts/Video";
+  import Video from "@/components/posts/Video";
 
 export const title = `vertical slider for client website`;
 export const date = "2024-08-13";
@@ -50,4 +50,3 @@ const Banner = ({ slides, scrollPosition, viewportHeight }) => {
   );
 };
 ```
-Typing into the input shows a potential flaw in our logic. Invoking the getLocations function every time the user types a letter could be excessive. To limit the number of requests and improve the feature, we can explore two approaches: **debouncing** or **throttling**. These methods help us control how often the function is called and ensure a smoother user experience.

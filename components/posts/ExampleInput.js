@@ -39,7 +39,7 @@ export default function ExampleInput({ cb }) {
     <div className='grid grid-rows-2 md:grid-cols-2 md:grid-rows-none'>
       <div className='flex justify-center items-center flex-col'>
         try typing:
-        <input className='border-2 border-black' value={search} onChange={handleChange}></input>
+        <input className='border-2 border-black text-black' value={search} onChange={handleChange}></input>
       </div>
       <Console reset={handleReset} messages={history.map((ele) => `(${ele[1]}) requested: "${ele[0]}"`)} />
     </div>
