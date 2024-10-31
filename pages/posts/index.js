@@ -3,7 +3,7 @@ import Section from '@/components/section';
 import Page from '@/components/layouts/page';
 import { getSortedPostsData } from '@/lib/posts';
 import Link from 'next/link';
-import Emblem from '@/components/posts/Emblem.js'
+import Emblem from '@/components/posts/Emblemm.js'
 
 export default function Posts({ allPostsData }) {
   return (

@@ -6,7 +6,7 @@ import Works from '@/components/works';
 import Section from '@/components/section';
 import Page from '@/components/layouts/page';
 import Link from 'next/link'
-import Emblem from '@/components/posts/Emblem.js'
+import Emblem from '@/components/posts/Emblemm.js'
 import { getSortedPostsData } from '@/lib/posts';
 import { Model } from '@/components/3dmodel'
 import React, { Suspense } from 'react';
