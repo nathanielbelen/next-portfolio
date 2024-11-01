@@ -2,7 +2,7 @@ import Page from '@/components/layouts/page';
 import Section from '@/components/section';
 import { getAllPostIds, getPostData } from '@/lib/posts';
 import dynamic from "next/dynamic";
-import Emblem from '@/components/posts/Emblemm.js'
+import Emblem from '@/components/posts/Emblemm'
 
 export default function Post({ postData: { id, title, date, emblems } }) {
   const DynamicBody = dynamic(() => import(`../../posts/${id}.mdx`));
