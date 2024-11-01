@@ -4,50 +4,14 @@ export const title = `check out this website i built`;
 export const date = "2024-08-13";
 export const emblems = [{'text': 'javascript', 'color':'bg-amber-200'}, {'text': 'next.js', 'color':'bg-gray-300'}, {'text': 'sanity.io', 'color':'bg-red-300'}]
 
-# # introduction
+# # showcase
 
-Recently I was contracted to build a <a href='https://edwardhosharian.org'>website</a> for a non-profit. For the homepage, the client requested a vertical slider whose individual slides slide off the screen one by one. A video of the finished component is below:
+Recently I was contracted to build a website for a non-profit. The Edward Hosharian Foundation is a nonprofit organization dedicated to supporting Armenian music, culture, and education, with a particular emphasis on promoting the legacy of Armenian-American composer Edward Hosharian.
 
-<Video path={'/slider.mp4'} />
+# # explained
 
-# problem
+The website is built on Next.js and hosted on Vercel. I used Sanity.io as a headless CMS, which provides both content management and an easy-to-use dashboard for the nonprofit to edit content themselves. The website features multiple pages, including 3 dynamic routes dealing with the foundation's events, blog posts, and media.
 
-I couldn't find a suitable library that fit the client's request that also allowed for commercial usage. I ended up having to build the component. Here's my implementation and some details on what I kept in mind when building the component.
+# # technical notes
 
-The functionality of the component:
-
-+ for every slide, the website should scroll exactly 1 screen height before veing removed from the screen
-
-+ the client requested that the body content below the slider be visible on screen
-
-+ there should be a key dots representing each slide
-
-
-
-- pass down viewportheight, scrollposition
-
-
-
-```javascript
-const Banner = ({ slides, scrollPosition, viewportHeight }) => {
-  return (
-    <div
-      style={{ height: `${slides.length * 100}vh` }}
-    >
-      {slides.map((slideData, index) => {
-        const slideTopPosition = index * viewportHeight;
-        const isSlideFixed = scrollPosition <= slideTopPosition;
-        return (
-          <Slide
-            fixed={isSlideFixed}
-            slideIndex={index + 1}
-            top={slideTopPosition}
-            key={`slide-${index}`}
-          />
-        );
-      })}
-    </div>
-  );
-};
-```
-Typing into the input shows a potential flaw in our logic. Invoking the getLocations function every time the user types a letter could be excessive. To limit the number of requests and improve the feature, we can explore two approaches: **debouncing** or **throttling**. These methods help us control how often the function is called and ensure a smoother user experience.
+There are still some items that need to be addressed that didn’t make it into the MVP. I need to fix the Flash of Unstyled Content (FOUC) at the beginning of the page, and I also need to improve image responsiveness, as the images currently loaded are quite large.
