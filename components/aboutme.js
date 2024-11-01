@@ -16,9 +16,7 @@ export default function About() {
       <div className='flex flex-col'>
         <div>
           <span className='block'>
-            Welcome! I&apos;m Nathaniel, a passionate <strong>full-stack engineer</strong> with a background in ecommerce. I thrive on the ability to help bring joy to people&apos;s lives through the creation of remarkable experiences. Previously, I had the privilege of working at <strong>Galvanize</strong> as a Software Engineering Immersive Resident, where I helped guide students on their journey to mastering the latest web development technologies. technologies. technologies. technologies. technologies. technologies. technologies. technologies. technologies. technologies. technologies. technologies. technologies. technologies. technologies. technologies.
-
-
+            Welcome! I&apos;m Nathaniel, a passionate <strong>full-stack engineer</strong> with a background in ecommerce. I thrive on the ability to help bring joy to people&apos;s lives through the creation of remarkable experiences. Previously, I had the privilege of working at <strong>Galvanize</strong> as a Software Engineering Immersive Resident, where I helped guide students on their journey to mastering the latest web development technologies.
           </span>
           <br />
           <span>
