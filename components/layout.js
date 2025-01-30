@@ -22,11 +22,11 @@ export default function Layout({ children }) {
       </AnimatePresence>
       <div className='max-w-screen-md mx-auto pb-14'>{children}</div>
       <Footer />
-      <Background />
+      {/* <Background /> */}
     </div>
   );
 }
-
+// background disabled currently due to performance issues
 
 const Background = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
