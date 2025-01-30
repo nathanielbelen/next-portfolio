@@ -5,7 +5,7 @@ let jobs = [
   {
     name: 'Freelance',
     role: 'Web Developer',
-    tenure: 'October 2022 - February 2024',
+    tenure: 'January 2023 - Now',
     points: [
       `Collaborated with diverse clients to translate their unique business requirements into customized and responsive web solutions, ensuring a seamless and tailored online presence.`,
       `Developed and implemented efficient and scalable code, leveraging a variety of web technologies and frameworks, such as HTML5, CSS3, JavaScript (including ES6+), and popular front-end libraries like React, to deliver high-performance and visually appealing websites.`,
